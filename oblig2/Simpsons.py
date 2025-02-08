@@ -5,6 +5,9 @@ from rdflib.namespace import RDF, RDFS, FOAF
 # RDF graph defined
 graph = Graph()
 
+# List of namespaces
+ns = {}
+
 
 def main():
 
@@ -21,8 +24,18 @@ def main():
 
             prefix = Namespace(uri)
             graph.bind(name, prefix)
+            ns[name] = prefix
 
             print(f"@Prefix {name}: <{uri}>")
+
+        # Task 2
+        manager = graph.namespace_manager.store
+        sim = manager.namespace("sim")
+        rdf = manager.namespace("rdf")
+        foaf = manager.namespace("foaf")
+        xsd = manager.namespace("xsd")
+
+        subject = sim.Maggie
 
     else:
         print(f"Missing arguments <input_file> <output_file>")
