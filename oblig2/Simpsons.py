@@ -1,6 +1,5 @@
 import sys
 from rdflib import Graph, Namespace, Literal, BNode
-from rdflib.namespace import RDF, RDFS, FOAF
 
 
 def main():
@@ -14,11 +13,11 @@ def main():
 
     graph = Graph()
 
-    # 1. Read input from file, add to graph
+    # Task 1
     try:
         graph.parse(input_path, format="turtle")
-    except:
-        print("error parsing ttl file")
+    except Exception as e:
+        print(f"error parsing ttl file: {e}")
 
     # read through namespaces, add to graph
     for prefix, namespace in graph.namespaces():
@@ -53,22 +52,32 @@ def main():
     graph.add((mona, FOAF.name, Literal("Abraham Simpson")))
     graph.add((mona, FOAF.age, Literal(78, datatype=XSD.int)))
 
-    # Abraham is spouse of Mona
+    # Abraham is spouse of Mona, Mona is spouse of Abraham
     graph.add((abraham, FAM.hasSpouse, mona))
-    # Mona is Spouse of Abraham
     graph.add((mona, FAM.hasSpouse, abraham))
 
     # Herb is a person, has an unknown father
     herb = SIM.Herb     # reference to Herb
-    father = BNode()
+    father = BNode()    # reference to blank father
     graph.add((herb, RDF.type, FOAF.Person))
     graph.add((herb, FAM.hasFather, father))
 
+    # Task 3
+    # printer hvert subjekt
+    print("\n\nPersoner:")
+    for person in graph.subjects(unique=True):
+        print(person)
+
+        #TODO:
+        # filtrer subjekt på FOAF:Person
+        # hent alder
+        # sjekk alder < 2 = infant, < 18 = Minor, > 70 = Old
+        # legg til   .add((SIM.navn, RDF.type, FAM.Old/Minor/Infant))
+
+
     # Task 4
-    try:
-        graph.serialize(destination=output_path, format="turtle")
-    except Exception as e:
-        print(f"Error saving to file: {e}")
+    with open(output_path, "w") as f:
+        f.write(graph.serialize(format="turtle"))
 
 
 if __name__ == "__main__":
