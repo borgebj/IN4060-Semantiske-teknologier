@@ -28,8 +28,8 @@ sim:Homer fam:hasSpouse sim:Marge .
 sim:Marge fam:hasSpouse sim:Homer .
 
 # Bart, Lisa, and Maggie are siblings, with Marge as mother and Homer as father
-sim:Lisa fam:hasBrother sim:Bart ; fam:hasMother sim:Marge ; fam:hasFather sim:Homer .
-sim:Bart fam:hasSister sim:Lisa ; fam:hasMother sim:Marge ; fam:hasFather sim:Homer .
+sim:Lisa fam:hasBrother sim:Bart ; fam:hasSister sim:Maggie ; fam:hasMother sim:Marge ; fam:hasFather sim:Homer .
+sim:Bart fam:hasSister sim:Lisa ; fam:hasSister sim:Maggie ; fam:hasMother sim:Marge ; fam:hasFather sim:Homer .
 sim:Maggie fam:hasSister sim:Lisa ; fam:hasBrother sim:Bart ; fam:hasMother sim:Marge ; fam:hasFather sim:Homer .
 
 

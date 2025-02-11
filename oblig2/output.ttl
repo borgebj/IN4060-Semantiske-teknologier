@@ -1,69 +1,65 @@
-@prefix fam: <http://www.ifi.uio.no/IN3060/family#> .
-@prefix foaf: <http://xmlns.com/foaf/0.1/> .
-@prefix sim: <http://www.ifi.uio.no/IN3060/simpsons#> .
-@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+PREFIX fam:  <http://www.ifi.uio.no/IN3060/family#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX rdf:  <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX sim:  <http://www.ifi.uio.no/IN3060/simpsons#>
+PREFIX xsd:  <http://www.w3.org/2001/XMLSchema#>
 
-sim:TheSimpsons a fam:Family ;
-    fam:hasFamilyMember sim:Bart,
-        sim:Homer,
-        sim:Lisa,
-        sim:Maggie,
-        sim:Marge .
+sim:Lisa  rdf:type      foaf:Person , fam:Minor;
+        fam:hasBrother  sim:Bart;
+        fam:hasFather   sim:Homer;
+        fam:hasMother   sim:Marge;
+        fam:hasParent   [ fam:hasSister  sim:Patty , sim:Selma ];
+        fam:hasParent   [ fam:hasBrother  sim:Herb ];
+        fam:hasSister   sim:Maggie;
+        foaf:age        "8"^^xsd:int;
+        foaf:name       "Lisa Simpson" .
 
-sim:Herb a foaf:Person ;
-    fam:hasFather [ ] .
+sim:Mona  rdf:type     foaf:Person;
+        fam:hasSpouse  sim:Abraham;
+        foaf:age       "70"^^xsd:int;
+        foaf:name      "Mona Simpson" .
 
-sim:Maggie a foaf:Person ;
-    fam:hasBrother sim:Bart ;
-    fam:hasFather sim:Homer ;
-    fam:hasMother sim:Marge ;
-    fam:hasParent [ fam:hasFather sim:Abraham ],
-        [ fam:hasMother sim:Mona ] ;
-    fam:hasSister sim:Lisa ;
-    foaf:age "1"^^xsd:int ;
-    foaf:name "Maggie Simpson" .
+sim:Abraham  rdf:type  fam:Old , foaf:Person;
+        fam:hasSpouse  sim:Mona;
+        foaf:age       "78"^^xsd:int;
+        foaf:name      "Abraham Simpson" .
 
-sim:Mona a foaf:Person ;
-    fam:hasSpouse sim:Abraham ;
-    foaf:age "70"^^xsd:int,
-        "78"^^xsd:int ;
-    foaf:name "Abraham Simpson",
-        "Mona Simpson" .
+sim:Patty  rdf:type    foaf:Person;
+        fam:hasSister  sim:Selma .
 
-sim:Patty a foaf:Person ;
-    fam:hasSister sim:Selma .
+sim:Homer  rdf:type    foaf:Person;
+        fam:hasFather  sim:Abraham;
+        fam:hasSpouse  sim:Marge;
+        foaf:age       "36"^^xsd:int;
+        foaf:name      "Homer Simpson" .
 
-sim:Selma a foaf:Person ;
-    fam:hasSister sim:Patty .
+sim:Marge  rdf:type    foaf:Person;
+        fam:hasSpouse  sim:Homer;
+        foaf:age       "34"^^xsd:int;
+        foaf:name      "Marge Simpson" .
 
-sim:Abraham a foaf:Person ;
-    fam:hasSpouse sim:Mona .
+sim:Maggie  rdf:type    foaf:Person , fam:Minor , fam:Infant;
+        fam:hasBrother  sim:Bart;
+        fam:hasFather   sim:Homer;
+        fam:hasMother   sim:Marge;
+        fam:hasParent   [ fam:hasMother  sim:Mona ];
+        fam:hasParent   [ fam:hasFather  sim:Abraham ];
+        fam:hasSister   sim:Lisa;
+        foaf:age        "1"^^xsd:int;
+        foaf:name       "Maggie Simpson" .
 
-sim:Bart a foaf:Person ;
-    fam:hasFather sim:Homer ;
-    fam:hasMother sim:Marge ;
-    fam:hasSister sim:Lisa ;
-    foaf:age "10"^^xsd:int ;
-    foaf:name "Bart Simpson" .
+sim:Herb  rdf:type     foaf:Person;
+        fam:hasFather  []  .
 
-sim:Lisa a foaf:Person ;
-    fam:hasBrother sim:Bart ;
-    fam:hasFather sim:Homer ;
-    fam:hasMother sim:Marge ;
-    fam:hasParent [ fam:hasSister sim:Patty,
-                sim:Selma ],
-        [ fam:hasBrother sim:Herb ] ;
-    foaf:age "8"^^xsd:int ;
-    foaf:name "Lisa Simpson" .
+sim:Bart  rdf:type     fam:Minor , foaf:Person;
+        fam:hasFather  sim:Homer;
+        fam:hasMother  sim:Marge;
+        fam:hasSister  sim:Maggie , sim:Lisa;
+        foaf:age       "10"^^xsd:int;
+        foaf:name      "Bart Simpson" .
 
-sim:Homer a foaf:Person ;
-    fam:hasFather sim:Abraham ;
-    fam:hasSpouse sim:Marge ;
-    foaf:age "36"^^xsd:int ;
-    foaf:name "Homer Simpson" .
+sim:Selma  rdf:type    foaf:Person;
+        fam:hasSister  sim:Patty .
 
-sim:Marge a foaf:Person ;
-    fam:hasSpouse sim:Homer ;
-    foaf:age "34"^^xsd:int ;
-    foaf:name "Marge Simpson" .
-
+sim:TheSimpsons  rdf:type    fam:Family;
+        fam:hasFamilyMember  sim:Maggie , sim:Bart , sim:Lisa , sim:Marge , sim:Homer .

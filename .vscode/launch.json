@@ -1,0 +1,22 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Simpsons Java",
+            "request": "launch",
+            "mainClass": "Simpsons", 
+            "projectName": "IN4060-Semantiske-teknologier_87d7f54",
+            "args": ["../simpsons.ttl", "../output.ttl"],  
+            "cwd": "${workspaceFolder}/oblig2/java" 
+        },
+        {
+            "type": "python",
+            "name": "Simpsons Python",
+            "request": "launch",
+            "program":"${file}",
+            "args": ["../simpsons.ttl", "../output.ttl"],  
+            "cwd": "${workspaceFolder}/oblig2/python",  
+        }
+    ]
+}
