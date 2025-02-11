@@ -1,6 +1,16 @@
 import sys
 from rdflib import Graph, Namespace, Literal, BNode
 
+def getFormat(url):
+    if url.endswith(".ttl"): 
+        return "turtle"
+    elif url.endswith(".rdf"):
+        return "xml"
+    elif url.endswith(".n3"):
+        return "n3"
+    elif url.endswith(".nt"):
+        return "nt"
+
 
 def main():
 
@@ -11,12 +21,13 @@ def main():
 
     input_path = sys.argv[1]
     output_path = sys.argv[2]
+    format = getFormat(input_path)
 
     graph = Graph()
 
     # Task 1
     try:
-        graph.parse(input_path)
+        graph.parse(input_path, format=format)
     except Exception as e:
         print(f"error parsing ttl file: {e}")
 
@@ -24,8 +35,6 @@ def main():
     for prefix, namespace in graph.namespaces():
         ns = Namespace(namespace)
         graph.bind(prefix, ns)
-
-        print(f"@Prefix {prefix}: <{namespace}>")
 
     # Task 2
     manager = graph.namespace_manager.store
@@ -49,9 +58,9 @@ def main():
 
     # Abraham is a person, name Abraham Simpson, age  78 of datatype xsd:int
     abraham = SIM.Abraham     # reference to Abraham
-    graph.add((mona, RDF.type, FOAF.Person))
-    graph.add((mona, FOAF.name, Literal("Abraham Simpson")))
-    graph.add((mona, FOAF.age, Literal(78, datatype=XSD.int)))
+    graph.add((abraham, RDF.type, FOAF.Person))
+    graph.add((abraham, FOAF.name, Literal("Abraham Simpson")))
+    graph.add((abraham, FOAF.age, Literal(78, datatype=XSD.int)))
 
     # Abraham is spouse of Mona, Mona is spouse of Abraham
     graph.add((abraham, FAM.hasSpouse, mona))
@@ -64,21 +73,31 @@ def main():
     graph.add((herb, FAM.hasFather, father))
 
     # Task 3
-    # printer hvert subjekt
-    print("\n\nPersoner:")
-    for person in graph.subjects(unique=True):
-        print(person)
+    for (subj, pred, obj) in graph.triples((None, RDF.type, FOAF.Person)):
+        age = graph.value(subj, FOAF.age)
 
-        #TODO:
-        # filtrer subjekt på FOAF:Person
-        # hent alder
-        # sjekk alder < 2 = infant, < 18 = Minor, > 70 = Old
-        # legg til   .add((SIM.navn, RDF.type, FAM.Old/Minor/Infant))
+        if age:
+            age = age.toPython()
+
+            # checks age, adds age-tag
+            if age < 2:
+                graph.add((subj, RDF.type, FAM.Infant))
+            if age < 18:
+                graph.add((subj, RDF.type, FAM.Minor))
+            if age > 70:
+                graph.add((subj, RDF.type, FAM.Old))
 
 
     # Task 4
+    turtle_output = graph.serialize(format=format)
+
+    # rdflib does not serialize rdf prefix due to 'a', so we add it
+    if not "@prefix rdf:" in turtle_output:
+            turtle_output = f"@prefix rdf: <{RDF}> .\n" + turtle_output
+
     with open(output_path, "w") as f:
-        f.write(graph.serialize())
+        f.write(turtle_output)
+
 
 
 if __name__ == "__main__":

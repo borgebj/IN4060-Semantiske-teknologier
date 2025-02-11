@@ -3,7 +3,6 @@ import org.apache.jena.rdf.model.ModelFactory;
 import org.apache.jena.rdf.model.Statement;
 import org.apache.jena.rdf.model.Resource;
 import org.apache.jena.rdf.model.Property;
-import org.apache.jena.rdf.model.Literal;
 import org.apache.jena.rdf.model.Model;
 
 import java.io.IOException;
@@ -54,9 +53,6 @@ public class Simpsons {
 
     public static void main(String[] args) {
 
-        //TODO: Remove
-        System.out.println("\n\n\n\n\n\n\n\n");
-
         if (args.length < 2) {
             System.out.println("Missing arguments <input_file> <output_file>");
             return;
@@ -81,11 +77,8 @@ public class Simpsons {
             e.printStackTrace();
         }
 
-        System.out.println("Input Path: " + input_path);
-        System.out.println("Output Path: " + output_path + "\n\n");
-        
         // add namespaces to global scope
-        Map<String, String> namespaces = model.getNsPrefixMap();
+        Map<String, String> namespaces = model.getNsPrefixMap(); // assuming
         SIM = namespaces.get("sim");
         FAM = namespaces.get("fam");
         RDF = namespaces.get("rdf");
@@ -159,8 +152,6 @@ public class Simpsons {
             
             String format = fileFormat(output_path);
             model.write(writer, format);
-
-            model.write(System.out, format); // DEBUG
         } 
         catch (IOException e) {
             e.printStackTrace();
