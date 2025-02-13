@@ -4,8 +4,11 @@ Oblig 2 baserte seg på å modellere RDF filen i format av turtle fra oblig 1 pr
 
 Jeg har to løsninger, en for hvert språk nevnt.
 
-__Krav__:
+
+__Kjørekrav__:
 
 Python:  `rdflib`
+> `pip install rdflib`
 
 Java: `apache Jena`
+> Download fra nettside eller bruk "jena" folder

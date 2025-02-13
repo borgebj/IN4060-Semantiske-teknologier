@@ -68,13 +68,14 @@ public class Simpsons {
         }
 
         // extract namespaces from the model
-        Map<String, String> namespaces = model.getNsPrefixMap(); // assuming
+        // assuming these exists
+        Map<String, String> namespaces = model.getNsPrefixMap();
         String SIM = namespaces.get("sim");
         String FAM = namespaces.get("fam");
         String RDF = namespaces.get("rdf");
         String FOAF = namespaces.get("foaf");
         String XSD = namespaces.get("xsd");
-        
+
 
         /** Task 2 */
         Property hasSpouse = model.createProperty(FAM + "hasSpouse");
@@ -87,19 +88,19 @@ public class Simpsons {
         // Maggie is a person named "Maggie Simpson" of age 1 datatype xsd:int
         Resource maggie = model.createResource(SIM + "Maggie")
             .addProperty(rdfType, foafPerson)
-            .addProperty(foafAge, model.createTypedLiteral("1", XSDDatatype.XSDint))
+            .addProperty(foafAge, model.createTypedLiteral("1", XSD + "int"))
             .addProperty(foafName, "Maggie Simpson");
 
         // Mona is a person named "Mona Simpson" of age 70 datatype xsd:int
         Resource mona = model.createResource(SIM + "Mona")
             .addProperty(rdfType, foafPerson)
-            .addProperty(foafAge, model.createTypedLiteral("70", XSDDatatype.XSDint))
+            .addProperty(foafAge, model.createTypedLiteral("70", XSD + "int"))
             .addProperty(foafName, "Mona Simpson");
        
         // Abraham is a person named "Abraham Simpson" of age 78 datatype xsd:int
         Resource abraham = model.createResource(SIM + "Abraham")
             .addProperty(rdfType, foafPerson)
-            .addProperty(foafAge, model.createTypedLiteral("78", XSDDatatype.XSDint))
+            .addProperty(foafAge, model.createTypedLiteral("78", XSD + "int"))
             .addProperty(foafName, "Abraham Simpson");
 
         // Abraham is spouse to Mona and vice versa
