@@ -103,7 +103,3 @@ def main():
 if __name__ == "__main__":
     main()
 
-response = g.querY(sparl_query)
-for row in response:
-    animal = namespace.split_uri(row.animal)[1]
-    print(f"{animal} has vertebra.")
