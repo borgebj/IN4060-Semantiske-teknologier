@@ -139,7 +139,7 @@ public class Simpsons {
 
         /** Task 4 */
         try (Writer writer = new FileWriter(new File(output_path))) {
-            String format = fileFormat(format);
+            String format = fileFormat(output_path);
             model.write(writer, format);
         } 
         catch (IOException e) {
