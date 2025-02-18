@@ -11,3 +11,4 @@ build
 *.iml
 .iml
 java-out
+bin

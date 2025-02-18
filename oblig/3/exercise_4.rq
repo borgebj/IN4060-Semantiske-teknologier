@@ -1,0 +1,30 @@
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX sim: <http://www.ifi.uio.no/IN3060/simpsons#>
+PREFIX fam: <http://www.ifi.uio.no/IN3060/family#> 
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+SELECT ?grandmother WHERE {
+  ?person foaf:name "Maggie Simpson" .
+  
+  # in cases hasFather is specified
+  OPTIONAL
+  {
+    ?person fam:hasMother ?mother .
+    ?mother fam:hasMother ?grandmother .
+  }
+  
+  # in cases hasMother is specified
+  OPTIONAL
+  {
+    ?person fam:hasFather ?father .
+    ?father fam:hasMother ?grandmother .
+  }
+  
+  # in case hasParent is specified
+  OPTIONAL
+  {
+    ?person fam:hasParent ?parent .
+    ?parent fam:hasMother ?grandmother .
+  }
+}
