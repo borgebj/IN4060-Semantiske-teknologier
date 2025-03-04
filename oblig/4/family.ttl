@@ -1,0 +1,61 @@
+# Exercise 1.1
+@prefix fam: http://www.ifi.uio.no/IN3060/family# .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix foaf:    <http://xmlns.com/foaf/0.1/> .
+
+
+# Exercise 1.2
+fam:Family rdf:type rdfs:Class .
+
+fam:hasFamilyMember rdf:type rdfs:Property .
+fam:hasBrother rdf:type rdfs:Property .
+fam:hasSister rdf:type rdfs:Property .
+fam:hasParent rdf:type rdfs:Property .
+fam:hasMother rdf:type rdfs:Property .
+fam:hasFather rdf:type rdfs:Property .
+fam:hasSpouse rdf:type rdfs:Property .
+
+# Exercise 1.3
+foaf:Person rdf:type rdfs:Class .
+fam:Man rdf:type rdfs:Class .
+fam:Gender rdf:type rdfs:Class .
+fam:Woman rdf:type rdfs:Class .
+
+fam:hasGender rdf:type rdfs:Property .
+fam:hasSibling rdf:type rdfs:Property .
+
+# Exercise 1.4
+fam:Female rdf:type fam:Gender .            # Female is a gender
+fam:Male rdf:type fam:Gender .              # Male is a gender
+
+# Exercise 1.5
+fam:isRelativeOf rdf:type rdfs:Property .
+fam:isRelativeOf rdfs:range foaf:Person .
+fam:isRelativeOf rdfs:domain foaf:Person .
+
+# Exercise 1.6
+fam:hasBrother rdfs:domain foaf:Person .    # Person(s) has a brother
+fam:hasBrother rdfs:range fam:Man .         # brothers are men
+
+# Exercise 1.7
+fam:Male rdfs:subClassOf foaf:Person .      # Male is a person
+fam:Man rdfs:subClassOf fam:Male .          # Man is a male
+
+fam:Female rdfs:subClassOf foaf:Person .    # Female is a person
+fam:Woman rdfs:subClassOf fam:Female .      # Woman is a female
+
+fam:hasSister rdfs:domain foaf:Person .     # Person(s) has a sister
+fam:hasSister rdfs:range fam:Woman .        # Sisters are woman
+
+fam:hasParent rdfs:domain foaf:Person .     # Person(s) has parents
+fam:hasParent rdfs:range :foaf:Person .     # Parents are person(s)
+
+fam:hasMother rdfs:domain foaf:Person .     # Person(s) has mothers
+fam:hasMother rdfs:range foaf:Person .      # Mothers are person(s)
+
+fam:hasSibling rdfs:domain foaf:Person .    # Person(s) has siblings
+fam:hasSibling rdfs:range foaf:Person .     # siblings are person(s)
+
+fam:hasSpouse rdfs:domain foaf:Person .     # Person(s) has spouses
+fam:hasSpouse rdfs:range foaf:Person .      # Spouses are person(s)
