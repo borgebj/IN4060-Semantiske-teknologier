@@ -35,27 +35,39 @@ fam:isRelativeOf rdfs:range foaf:Person .
 fam:isRelativeOf rdfs:domain foaf:Person .
 
 # Exercise 1.6
-fam:hasBrother rdfs:domain foaf:Person .    # Person(s) has a brother
-fam:hasBrother rdfs:range fam:Man .         # brothers are men
+fam:hasBrother rdfs:domain foaf:Person .                # Person(s) has a brother
+fam:hasBrother rdfs:range fam:Man .                     # brothers are men
 
 # Exercise 1.7
-fam:Male rdfs:subClassOf foaf:Person .      # Male is a person
-fam:Man rdfs:subClassOf fam:Male .          # Man is a male
+fam:Male rdfs:subClassOf foaf:Person .                  # Male is a person
+fam:Man rdfs:subClassOf fam:Male .                      # Man is a male
 
-fam:Female rdfs:subClassOf foaf:Person .    # Female is a person
-fam:Woman rdfs:subClassOf fam:Female .      # Woman is a female
+fam:hasBrother rdfs:subPropertyOf fam:isRelativeOf .   
 
-fam:hasSister rdfs:domain foaf:Person .     # Person(s) has a sister
-fam:hasSister rdfs:range fam:Woman .        # Sisters are woman
+fam:Female rdfs:subClassOf foaf:Person .                # Female is a person
+fam:Woman rdfs:subClassOf fam:Female .                  # Woman is a female
 
-fam:hasParent rdfs:domain foaf:Person .     # Person(s) has parents
-fam:hasParent rdfs:range :foaf:Person .     # Parents are person(s)
+fam:hasSister rdfs:domain foaf:Person .                 # Person(s) has a sister
+fam:hasSister rdfs:range fam:Woman .                    # Sisters are woman
+fam:hasSister rdfs:subPropertyOf fam:isRelativeOf .
 
-fam:hasMother rdfs:domain foaf:Person .     # Person(s) has mothers
-fam:hasMother rdfs:range foaf:Person .      # Mothers are person(s)
+fam:hasParent rdfs:domain foaf:Person .                 # Person(s) has parents
+fam:hasParent rdfs:range :foaf:Person .                 # Parents are person(s)
+fam:hasParent rdfs:subPropertyOf fam:isRelativeOf . 
 
-fam:hasSibling rdfs:domain foaf:Person .    # Person(s) has siblings
-fam:hasSibling rdfs:range foaf:Person .     # siblings are person(s)
+fam:hasMother rdfs:domain foaf:Person .                 # Person(s) has mothers
+fam:hasMother rdfs:range foaf:Person .                  # Mothers are person(s)
+fam:hasMother rdfs:subPropertyOf fam:isRelativeOf .
 
-fam:hasSpouse rdfs:domain foaf:Person .     # Person(s) has spouses
-fam:hasSpouse rdfs:range foaf:Person .      # Spouses are person(s)
+fam:hasFather rdfs:domain foaf:Person .                 # Person(s) has fathers
+fam:hasFather rdfs:range foaf:Person .                  # Fathers are person(s)
+fam:hasMother rdfs:subPropertyOf fam:isRelativeOf .
+
+fam:hasSibling rdfs:domain foaf:Person .                # Person(s) has siblings
+fam:hasSibling rdfs:range foaf:Person .                 # siblings are person(s)
+fam:hasSibling rdfs:subPropertyOf fam:isRelativeOf .
+
+fam:hasSpouse rdfs:domain foaf:Person .                 # Person(s) has spouses
+fam:hasSpouse rdfs:range foaf:Person .                  # Spouses are person(s)
+fam:hasSpouse rdfs:subPropertyOf fam:isRelativeOf .
+

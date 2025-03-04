@@ -1,0 +1,58 @@
+IN3060 oblig 4 – Entailment
+Exercise 2.1
+
+[1]
+Yes, with the derivation:
+1. sim:Marge  fam:hasSpouse  sim:Homer – P
+2. fam:hasSpouse  rdfs:domain  foaf:Person – P
+3. sim:Marge  rdf:type  foaf:Person – rdfs2, 1,2
+
+
+[2]
+Yes, this is true because it is specified in the family.ttl in exercise 1.7
+
+
+[3]
+No, this is not true.
+We can derive using rdfs2 that sim:Marge is a foaf:Person, but we can not say that sim:Marge is a fam:Woman because she is a foaf:Person.
+
+
+[4]
+Yes, with the derivation:
+1. fam:hasBrother  rdfs:range  fam:Man – P
+2. _:2  fam:hasBrother  sim:Herb – P
+3. sim:Herb  rdf:type  fam:Man – rdfs3, 1,2
+
+
+[5]
+Yes, with the derivation:
+1. fam:hasFather  rdfs:subPropertyOf  fam:isRelativeOf – P
+2. sim:Lisa  fam:hasFather  sim:homer – P
+3. sim:Lisa  fam:isRelativeOf  sim:Homer – rdfs7, 1,2
+
+
+[6]
+1. sim:Lisa  fam:hasMother  sim:Marge 
+No this is not true.
+This is because there is no rule that can be applied where a conclusion of Lisa having Marge as mother can be met.
+It can be believed blank node 1 represents Marge and lisa hasParent blank node 1, but this never specifies neither if it is Lisa’s mother nor it being actually Marge.
+
+
+[7]
+1. fam:hasSister  rdf:range  fam:Woman – P
+2. _:1  fam:hasSister  sim:Patty – P
+3. sim:Patty  rdf:type  fam:Woman – rdfs3, 1,2
+4. fam:Woman  rdfs:subClassOf  fam:Female – P
+5. fam:Female  rdfs:subClassOf  foaf:Person – P
+6. fam:Woman  rdf:subClassOf  foaf:Person – rdfs11, 4,5
+7. sim:Patty  rdf:type  foaf:Person – rdfs9, 6,3
+
+
+[8]
+_:a  fam:hasParent  _:b      
+_:b  fam:hasSister  sim:Patty
+
+
+[9]
+_:d  fam:hasBrother  _:e
+-:d  fam:hasBrother  -:f
