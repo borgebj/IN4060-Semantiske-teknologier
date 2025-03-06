@@ -32,7 +32,6 @@ Yes, with the derivation:
 
 
 [6]
-1. sim:Lisa  fam:hasMother  sim:Marge 
 No this is not true.
 This is because there is no rule that can be applied where a conclusion of Lisa having Marge as mother can be met.
 It can be believed blank node 1 represents Marge and lisa hasParent blank node 1, but this never specifies neither if it is Lisa’s mother nor it being actually Marge.
@@ -42,10 +41,8 @@ It can be believed blank node 1 represents Marge and lisa hasParent blank node 1
 1. fam:hasSister  rdf:range  fam:Woman – P
 2. _:1  fam:hasSister  sim:Patty – P
 3. sim:Patty  rdf:type  fam:Woman – rdfs3, 1,2
-4. fam:Woman  rdfs:subClassOf  fam:Female – P
-5. fam:Female  rdfs:subClassOf  foaf:Person – P
-6. fam:Woman  rdf:subClassOf  foaf:Person – rdfs11, 4,5
-7. sim:Patty  rdf:type  foaf:Person – rdfs9, 6,3
+4. fam:Woman  rdfs:subClassOf  foaf:Person – P
+5. sim:Patty  rdf:type  foaf:Person – rdfs9, 4,3
 
 
 [8]
