@@ -49,33 +49,33 @@ fam:hasBrother rdfs:subPropertyOf fam:hasFamilyMember . # Brother is a family me
 # Sister
 fam:hasSister rdfs:domain foaf:Person .                 # Person(s) has a sister
 fam:hasSister rdfs:range fam:Woman .                    # Sisters are woman
-fam:hasSister rdfs:subPropertyOf fam:isRelativeOf .
+fam:hasSister rdfs:subPropertyOf fam:isRelativeOf .     # feil?
 fam:hasSister rdfs:subPropertyOf fam:hasFamilyMember .
 
 # Parent
 fam:hasParent rdfs:domain foaf:Person .                 # Person(s) has parents
-fam:hasParent rdfs:range foaf:Person .                 # Parents are person(s)
-fam:hasParent rdfs:subPropertyOf fam:isRelativeOf .
+fam:hasParent rdfs:range foaf:Person .                  # Parents are person(s)
+fam:hasParent rdfs:subPropertyOf fam:isRelativeOf .     # feil?
 fam:hasParent rdfs:subPropertyOf fam:hasFamilyMember .
 
 # Mother
 fam:hasMother rdfs:domain foaf:Person .                 # Person(s) has mothers
 fam:hasMother rdfs:range foaf:Person .                  # Mothers are person(s)
-fam:hasMother rdfs:subPropertyOf fam:isRelativeOf .
+fam:hasMother rdfs:subPropertyOf fam:isRelativeOf .     # feil?
 fam:hasMother rdfs:subPropertyOf fam:hasFamilyMember .
 fam:hasMother rdfs:subPropertyOf fam:hasParent .
 
 # Father
 fam:hasFather rdfs:domain foaf:Person .                 # Person(s) has fathers
 fam:hasFather rdfs:range foaf:Person .                  # Fathers are person(s)
-fam:hasFather rdfs:subPropertyOf fam:isRelativeOf .
+fam:hasFather rdfs:subPropertyOf fam:isRelativeOf .     # feil?
 fam:hasFather rdfs:subPropertyOf fam:hasFamilyMember .
 fam:hasFather rdfs:subPropertyOf fam:hasParent .
 
 # Sibling
 fam:hasSibling rdfs:domain foaf:Person .                # Person(s) has siblings
 fam:hasSibling rdfs:range foaf:Person .                 # siblings are person(s)
-fam:hasSibling rdfs:subPropertyOf fam:isRelativeOf .
+fam:hasSibling rdfs:subPropertyOf fam:isRelativeOf .    # feil?
 fam:hasSibling rdfs:subPropertyOf fam:hasFamilyMember .
 
 # Spouse
