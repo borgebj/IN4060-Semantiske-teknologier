@@ -13,7 +13,7 @@ Yes, this is true because it is specified in the family.ttl in exercise 1.7
 
 
 [3]
-No, this is not true.
+No, this can not be proven.
 We can derive using rdfs2 that sim:Marge is a foaf:Person, but we can not say that sim:Marge is a fam:Woman because she is a foaf:Person.
 
 
@@ -32,7 +32,7 @@ Yes, with the derivation:
 
 
 [6]
-No this is not true.
+No, this can not be proven.
 This is because there is no rule that can be applied where a conclusion of Lisa having Marge as mother can be met.
 It can be believed blank node 1 represents Marge and lisa hasParent blank node 1, but this never specifies neither if it is Lisa’s mother nor it being actually Marge.
 
@@ -41,15 +41,23 @@ It can be believed blank node 1 represents Marge and lisa hasParent blank node 1
 1. fam:hasSister  rdf:range  fam:Woman – P
 2. _:1  fam:hasSister  sim:Patty – P
 3. sim:Patty  rdf:type  fam:Woman – rdfs3, 1,2
-4. fam:Woman  rdfs:subClassOf  foaf:Person – P
-5. sim:Patty  rdf:type  foaf:Person – rdfs9, 4,3
+4. fam:Woman  rdfs:subClassOf  fam:Female – P
+5. fam:Female  rdfs:subClassOf  foaf:Person – P
+6. fam:Woman  rdf:subClassOf  foaf:Person – rdfs11, 4,5
+7. sim:Patty  rdf:type  foaf:Person – rdfs9, 6,3
 
 
 [8]
-_:a  fam:hasParent  _:b      
-_:b  fam:hasSister  sim:Patty
+Yes, with the derivation:
+1. sim:Lisa fam:hasParent _:1 - P
+2. _:1 fam:hasSister sim:Patty - P
+3 _:a fam:hasParent _:1 - se2 on 1, _:a for sim:Lisa
+4. _:a fam:hasParent _:b - se1 on 3, _:b for _:1
+5. _:b fam:hasSister sim:Patty - se2 on 2, _:b for _:1
+
 
 
 [9]
-_:d  fam:hasBrother  _:e
--:d  fam:hasBrother  -:f
+No, this can not be proven.
+It states there exists a person (_:d) who has two different brothers, (_:e) and (_:f).
+We only know one person with a brother (_:2), but (_:2) has only one brother (sim:Herb), and therefore it can not be proven.
