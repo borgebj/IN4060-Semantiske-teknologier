@@ -5,9 +5,17 @@ PREFIX fam: <http://www.ifi.uio.no/IN3060/family#>
 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
 CONSTRUCT {
-  ?person foaf:name ?name .
+  sim:Homer foaf:knows ?relative .
 }
 WHERE {
-  ?person rdf:type foaf:Person .
-  ?person foaf:name ?name .
+  {
+    sim:Homer fam:isRelativeOf ?relative .    # Homer is related to someone
+  }
+  UNION                                       # "or"
+  {
+    ?relative fam:isRelativeOf sim:Homer .    # Someone is related to Homer
+  }
+                                              # "and"
+
+  ?relative rdf:type foaf:Person .            # that someone is a person
 }

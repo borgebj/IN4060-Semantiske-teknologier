@@ -1,61 +1,91 @@
+@prefix xsd:     <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdf:     <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix sim:     <http://www.ifi.uio.no/IN3060/simpsons#> .
+@prefix fam:     <http://www.ifi.uio.no/IN3060/family#> .
+@prefix foaf:    <http://xmlns.com/foaf/0.1/> .
 
-# Task 1 
+sim:Homer
+      a       foaf:Person ;
+      foaf:age "36"^^xsd:int ;
+      foaf:name "Homer Simpson" .
 
-@prefix rdf:  <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
-@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix foaf: <http://xmlns.com/foaf/0.1/> .
-@prefix fam: <http://www.ifi.uio.no/IN3060/family#> .
-@prefix sim: <http://www.ifi.uio.no/IN3060/simpsons#> .
+sim:Marge
+      a       foaf:Person ;
+      foaf:age "34"^^xsd:int ;
+      foaf:name "Marge Simpson" .
 
+sim:Lisa
+      a       foaf:Person ;
+      foaf:age "8"^^xsd:int ;
+      foaf:name "Lisa Simpson" .
 
-# Task 2
+sim:Bart
+      a       foaf:Person ;
+      foaf:age "10"^^xsd:int ;
+      foaf:name "Bart Simpson" .
 
-sim:Homer rdf:type foaf:Person ; foaf:name "Homer Simpson" ; foaf:age "36"^^xsd:int .
-sim:Marge rdf:type foaf:Person ; foaf:name "Marge Simpson" ; foaf:age "34"^^xsd:int .
-sim:Lisa rdf:type foaf:Person ; foaf:name "Lisa Simpson" ; foaf:age "8"^^xsd:int .
-sim:Bart rdf:type foaf:Person ; foaf:name "Bart Simpson" ; foaf:age "10"^^xsd:int .
-sim:Maggie rdf:type foaf:Person ; foaf:name "Maggie Simpson" ; foaf:age "1"^^xsd:int .
+sim:Maggie
+      a       foaf:Person ;
+      foaf:age "1"^^xsd:int ;
+      foaf:name "Maggie Simpson" .
 
+sim:Simpsons
+      a       fam:Family ;
+      fam:hasFamilyMember sim:Maggie , sim:Homer , sim:Lisa , sim:Bart, sim:Marge .
 
-# Task 3 
+sim:Homer
+      fam:hasSpouse sim:Marge .
 
-# The Simpsons is a family with members Marge, Homer, Bart, Lisa, and Maggie
-sim:TheSimpsons rdf:type fam:Family .
-sim:TheSimpsons fam:hasFamilyMember sim:Homer, sim:Marge, sim:Lisa, sim:Bart, sim:Maggie .
+sim:Marge
+      fam:hasSpouse sim:Homer .
 
-# Homer and marge are spouses
-sim:Homer fam:hasSpouse sim:Marge .
-sim:Marge fam:hasSpouse sim:Homer .
+sim:Bart
+      fam:hasFather sim:Homer ;
+      fam:hasMother sim:Marge .
 
-# Bart, Lisa, and Maggie are siblings, with Marge as mother and Homer as father
-sim:Lisa fam:hasBrother sim:Bart ; fam:hasMother sim:Marge ; fam:hasFather sim:Homer .
-sim:Bart fam:hasSister sim:Lisa ; fam:hasMother sim:Marge ; fam:hasFather sim:Homer .
-sim:Maggie fam:hasSister sim:Lisa ; fam:hasBrother sim:Bart ; fam:hasMother sim:Marge ; fam:hasFather sim:Homer .
+sim:Lisa
+      fam:hasFather sim:Homer ;
+      fam:hasMother sim:Marge .
 
+sim:Maggie
+      fam:hasFather sim:Homer ;
+      fam:hasMother sim:Marge .
 
+sim:Abraham a foaf:Person .
+sim:Maggie
+      fam:hasParent
+              [ a       foaf:Person ;
+                fam:hasFather sim:Abraham
+              ] .
 
-# Task 4
+sim:Mona a foaf:Person .
+sim:Maggie
+      fam:hasParent
+              [ a       foaf:Person ;
+                fam:hasMother sim:Mona
+              ] .
+sim:Lisa
+      fam:hasParent
+              [ a       foaf:Person ;
+                fam:hasSister sim:Patty , sim:Selma
+              ] ;
+      fam:hasParent
+              [ a       foaf:Person ;
+                fam:hasBrother sim:Herb
+              ] .
 
-# Maggie has the grandfather Abraham and the grandmother Mona
-sim:Abraham rdf:type foaf:Person .
-sim:Mona rdf:type foaf:Person .
+sim:Herb a foaf:Person .
 
-sim:Maggie fam:hasParent [ fam:hasFather sim:Abraham ] ; fam:hasParent [ fam:hasMother sim:Mona ] .
+sim:Patty 
+      a  foaf:Person ;
+      fam:hasSister sim:Selma .
 
+sim:Selma 
+      a  foaf:Person ;
+      fam:hasSister sim:Patty .
 
-# Task 5
-
-# Lisa has the aunts Patty and selma and the uncle Herb. Patty and Selma are sisters.
-sim:Patty rdf:type foaf:Person .
-sim:Selma rdf:type foaf:Person .
-sim:Herb rdf:type foaf:Person .
-
-sim:Patty fam:hasSister sim:Selma .
-sim:Selma fam:hasSister sim:Patty .
-sim:Lisa fam:hasParent [ fam:hasSister sim:Selma ; fam:hasSister sim:Patty ] ; fam:hasParent [ fam:hasBrother sim:Herb ] .
-
-
-# Task 6
-
-# Marge has a father-in-law Abraham
-sim:Marge fam:hasSpouse [ fam:hasFather sim:Abraham ] .
+sim:Marge
+      fam:hasSpouse
+              [ a       foaf:Person ;
+                fam:hasFather sim:Abraham
+              ] .

@@ -42,6 +42,10 @@ fam:hasBrother rdfs:range fam:Man .                     # brothers are men
 fam:Man rdfs:subClassOf foaf:Person .                   # Male is a person
 fam:Woman rdfs:subClassOf foaf:Person .                 # Female is a person
 
+fam:hasFamilyMember rdfs:domain foaf:Person .
+fam:hasFamilyMember rdfs:range foaf:Person .
+fam:hasFamilyMember rdfs:subPropertyOf fam:isRelativeOf .
+
 # Brother
 fam:hasBrother rdfs:subPropertyOf fam:isRelativeOf .    # Brother is a relative
 fam:hasBrother rdfs:subPropertyOf fam:hasFamilyMember . # Brother is a family member
@@ -82,4 +86,5 @@ fam:hasSibling rdfs:subPropertyOf fam:hasFamilyMember .
 fam:hasSpouse rdfs:domain foaf:Person .                 # Person(s) has spouses
 fam:hasSpouse rdfs:range foaf:Person .                  # Spouses are person(s)
 fam:hasSpouse rdfs:subPropertyOf fam:hasFamilyMember .
+fam:hasSpouse rdfs:subPropertyOf fam:isRelativeOf .
 
