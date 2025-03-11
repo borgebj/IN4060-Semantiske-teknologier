@@ -15,7 +15,6 @@ WHERE {
   {
     ?relative fam:isRelativeOf sim:Homer .    # Someone is related to Homer
   }
-                                              # "and"
 
   ?relative rdf:type foaf:Person .            # that someone is a person
 }

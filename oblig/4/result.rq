@@ -4,4 +4,4 @@ PREFIX rdf:  <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
 PREFIX sim:  <http://www.ifi.uio.no/IN3060/simpsons#>
 PREFIX xsd:  <http://www.w3.org/2001/XMLSchema#>
 
-sim:Homer  foaf:knows  sim:Simpsons , sim:Bart , sim:Lisa , sim:Maggie , sim:Marge .
+sim:Homer  foaf:knows  sim:Bart , sim:Lisa , sim:Maggie , sim:Marge .
