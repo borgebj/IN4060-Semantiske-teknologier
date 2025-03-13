@@ -23,13 +23,13 @@ public class Oblig4 {
         String output_name = args[2];  
 
         // Models for RDF and RDFS
-        Model schemaModel = ModelFactory.createDefaultModel();
-        Model dataModel = ModelFactory.createDefaultModel();
+        Model schema = ModelFactory.createDefaultModel();
+        Model data = ModelFactory.createDefaultModel();
 
         // 1: Loads the RDFS schema (family.ttl)
         try (FileReader schemaReader = new FileReader(schema_file)) {
             String format = fileFormat(schema_file);
-            schemaModel.read(schemaReader, null, format);
+            schema.read(schemaReader, null, format);
         } catch (IOException e) {
             System.out.println("Error reading the RDFS schema file: " + e.getMessage());
             return;
@@ -39,14 +39,14 @@ public class Oblig4 {
         String schema_url = "https://www.uio.no/studier/emner/matnat/ifi/IN3060/v23/obliger/simpsons.ttl";
         String format = fileFormat(schema_file);
         try {
-            dataModel.read(schema_url, format);
+            data.read(schema_url, format);
         } catch (Exception e) {
             System.out.println("Error reading instance data: " + e.getMessage());
             return;
         }
 
         // 3: Applies RDFS reasoning
-        Model rdfsModel = ModelFactory.createRDFSModel(schemaModel, dataModel);
+        Model rdfsModel = ModelFactory.createRDFSModel(schema, data);
 
         // 4: Reads given SPARQL query
         String queryStr = readQueryFile(sparql);
@@ -60,7 +60,7 @@ public class Oblig4 {
         try (QueryExecution qe = QueryExecutionFactory.create(query, rdfsModel)) {
             Model constructResult = qe.execConstruct();
 
-            // Write the result to a file
+            // writes constructed model to output file
             try (Writer writer = new FileWriter(new File(output_name))) {
                 constructResult.write(writer, format);
             } catch (IOException e) {
