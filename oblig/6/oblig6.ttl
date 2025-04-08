@@ -1,0 +1,304 @@
+@prefix : <http://www.semanticweb.org/borgebj/ontologies/2025/3/untitled-ontology-3#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <http://www.semanticweb.org/borgebj/ontologies/2025/3/untitled-ontology-3> .
+
+<http://www.semanticweb.org/borgebj/ontologies/2025/3/untitled-ontology-3> rdf:type owl:Ontology .
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  http://www.semanticweb.org/borgebj/ontologies/2025/3/untitled-ontology-3#ancestor
+:ancestor rdf:type owl:ObjectProperty ,
+                   owl:TransitiveProperty .
+
+
+###  http://www.semanticweb.org/borgebj/ontologies/2025/3/untitled-ontology-3#dam
+:dam rdf:type owl:ObjectProperty ;
+     rdfs:subPropertyOf :ancestor ;
+     rdfs:domain :Horse ;
+     rdfs:range :Horse .
+
+
+###  http://www.semanticweb.org/borgebj/ontologies/2025/3/untitled-ontology-3#hadInterestIn
+:hadInterestIn rdf:type owl:ObjectProperty ;
+               owl:propertyChainAxiom ( :trains
+                                        :hasCompeted
+                                      ) .
+
+
+###  http://www.semanticweb.org/borgebj/ontologies/2025/3/untitled-ontology-3#hasCompeted
+:hasCompeted rdf:type owl:ObjectProperty ;
+             rdfs:domain :Horse ;
+             rdfs:range :HorseRace .
+
+
+###  http://www.semanticweb.org/borgebj/ontologies/2025/3/untitled-ontology-3#hasTrainer
+:hasTrainer rdf:type owl:ObjectProperty ;
+            owl:inverseOf :trains ;
+            rdfs:domain :Horse ;
+            rdfs:range :Person .
+
+
+###  http://www.semanticweb.org/borgebj/ontologies/2025/3/untitled-ontology-3#hasWon
+:hasWon rdf:type owl:ObjectProperty ;
+        rdfs:subPropertyOf :hasCompeted .
+
+
+###  http://www.semanticweb.org/borgebj/ontologies/2025/3/untitled-ontology-3#sire
+:sire rdf:type owl:ObjectProperty ;
+      rdfs:subPropertyOf :ancestor ;
+      rdfs:domain :Horse ;
+      rdfs:range :Horse .
+
+
+###  http://www.semanticweb.org/borgebj/ontologies/2025/3/untitled-ontology-3#trains
+:trains rdf:type owl:ObjectProperty ;
+        rdfs:domain :Person ;
+        rdfs:range :Horse .
+
+
+#################################################################
+#    Data properties
+#################################################################
+
+###  http://www.semanticweb.org/borgebj/ontologies/2025/3/untitled-ontology-3#age
+:age rdf:type owl:DatatypeProperty ;
+     rdfs:range xsd:int .
+
+
+###  http://www.semanticweb.org/borgebj/ontologies/2025/3/untitled-ontology-3#name
+:name rdf:type owl:DatatypeProperty ;
+      rdfs:range xsd:string .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://www.semanticweb.org/borgebj/ontologies/2025/3/untitled-ontology-3#Animal
+:Animal rdf:type owl:Class ;
+        rdfs:subClassOf [ rdf:type owl:Class ;
+                          owl:unionOf ( :Female
+                                        :Male
+                                      )
+                        ] .
+
+
+###  http://www.semanticweb.org/borgebj/ontologies/2025/3/untitled-ontology-3#ColdbloodedHorse
+:ColdbloodedHorse rdf:type owl:Class ;
+                  rdfs:subClassOf :Horse ;
+                  owl:disjointWith :WarmbloodedHorse .
+
+
+###  http://www.semanticweb.org/borgebj/ontologies/2025/3/untitled-ontology-3#Female
+:Female rdf:type owl:Class ;
+        owl:disjointWith :Male .
+
+
+###  http://www.semanticweb.org/borgebj/ontologies/2025/3/untitled-ontology-3#Filly
+:Filly rdf:type owl:Class ;
+       owl:equivalentClass [ owl:intersectionOf ( :Female
+                                                  :Horse
+                                                  [ rdf:type owl:Restriction ;
+                                                    owl:onProperty :age ;
+                                                    owl:allValuesFrom [ rdf:type rdfs:Datatype ;
+                                                                        owl:onDatatype xsd:int ;
+                                                                        owl:withRestrictions ( [ xsd:maxExclusive "4"^^xsd:int
+                                                                                               ]
+                                                                                             )
+                                                                      ]
+                                                  ]
+                                                ) ;
+                             rdf:type owl:Class
+                           ] .
+
+
+###  http://www.semanticweb.org/borgebj/ontologies/2025/3/untitled-ontology-3#Horse
+:Horse rdf:type owl:Class ;
+       rdfs:subClassOf :Animal ,
+                       [ rdf:type owl:Restriction ;
+                         owl:onProperty :dam ;
+                         owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                         owl:onClass [ owl:intersectionOf ( :Female
+                                                            :Horse
+                                                          ) ;
+                                       rdf:type owl:Class
+                                     ]
+                       ] ,
+                       [ rdf:type owl:Restriction ;
+                         owl:onProperty :sire ;
+                         owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                         owl:onClass [ owl:intersectionOf ( :Horse
+                                                            :Male
+                                                          ) ;
+                                       rdf:type owl:Class
+                                     ]
+                       ] ;
+       owl:disjointWith :HorseRace .
+
+
+###  http://www.semanticweb.org/borgebj/ontologies/2025/3/untitled-ontology-3#HorseRace
+:HorseRace rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/borgebj/ontologies/2025/3/untitled-ontology-3#Male
+:Male rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/borgebj/ontologies/2025/3/untitled-ontology-3#MonteHorse
+:MonteHorse rdf:type owl:Class ;
+            rdfs:subClassOf [ owl:intersectionOf ( :RaceHorse
+                                                   [ rdf:type owl:Restriction ;
+                                                     owl:onProperty :hasCompeted ;
+                                                     owl:allValuesFrom :MonteRace
+                                                   ]
+                                                 ) ;
+                              rdf:type owl:Class
+                            ] .
+
+
+###  http://www.semanticweb.org/borgebj/ontologies/2025/3/untitled-ontology-3#MonteRace
+:MonteRace rdf:type owl:Class ;
+           rdfs:subClassOf :HorseRace .
+
+
+###  http://www.semanticweb.org/borgebj/ontologies/2025/3/untitled-ontology-3#Person
+:Person rdf:type owl:Class ;
+        rdfs:subClassOf [ rdf:type owl:Restriction ;
+                          owl:onProperty :name ;
+                          owl:someValuesFrom xsd:string
+                        ] ;
+        owl:disjointUnionOf ( :Horse
+                              :HorseRace
+                            ) .
+
+
+###  http://www.semanticweb.org/borgebj/ontologies/2025/3/untitled-ontology-3#RaceHorse
+:RaceHorse rdf:type owl:Class ;
+           owl:equivalentClass [ owl:intersectionOf ( :Horse
+                                                      [ rdf:type owl:Restriction ;
+                                                        owl:onProperty :hasCompeted ;
+                                                        owl:someValuesFrom :HorseRace
+                                                      ]
+                                                    ) ;
+                                 rdf:type owl:Class
+                               ] ;
+           rdfs:subClassOf [ rdf:type owl:Restriction ;
+                             owl:onProperty :hasTrainer ;
+                             owl:someValuesFrom :Person
+                           ] ,
+                           [ rdf:type owl:Restriction ;
+                             owl:onProperty :name ;
+                             owl:someValuesFrom xsd:string
+                           ] ;
+           owl:hasKey ( :name
+                      ) .
+
+
+###  http://www.semanticweb.org/borgebj/ontologies/2025/3/untitled-ontology-3#Stallion
+:Stallion rdf:type owl:Class ;
+          owl:equivalentClass [ owl:intersectionOf ( :Horse
+                                                     :Male
+                                                     [ rdf:type owl:Restriction ;
+                                                       owl:onProperty :age ;
+                                                       owl:allValuesFrom [ rdf:type rdfs:Datatype ;
+                                                                           owl:onDatatype xsd:int ;
+                                                                           owl:withRestrictions ( [ xsd:minInclusive "4"^^xsd:int
+                                                                                                  ]
+                                                                                                )
+                                                                         ]
+                                                     ]
+                                                   ) ;
+                                rdf:type owl:Class
+                              ] .
+
+
+###  http://www.semanticweb.org/borgebj/ontologies/2025/3/untitled-ontology-3#SuperHorse
+:SuperHorse rdf:type owl:Class ;
+            owl:equivalentClass [ owl:intersectionOf ( :RaceHorse
+                                                       [ rdf:type owl:Restriction ;
+                                                         owl:onProperty :hasWon ;
+                                                         owl:minQualifiedCardinality "101"^^xsd:nonNegativeInteger ;
+                                                         owl:onClass :HorseRace
+                                                       ]
+                                                     ) ;
+                                  rdf:type owl:Class
+                                ] .
+
+
+###  http://www.semanticweb.org/borgebj/ontologies/2025/3/untitled-ontology-3#WarmbloodedHorse
+:WarmbloodedHorse rdf:type owl:Class ;
+                  rdfs:subClassOf :Horse .
+
+
+#################################################################
+#    Individuals
+#################################################################
+
+###  http://www.semanticweb.org/borgebj/ontologies/2025/3/untitled-ontology-3#:Doctor
+<http://www.semanticweb.org/borgebj/ontologies/2025/3/untitled-ontology-3#:Doctor> rdf:type owl:NamedIndividual ;
+                                                                                   :name "Doctor Rodney" .
+
+
+###  http://www.semanticweb.org/borgebj/ontologies/2025/3/untitled-ontology-3#:Elitloppet1986
+<http://www.semanticweb.org/borgebj/ontologies/2025/3/untitled-ontology-3#:Elitloppet1986> rdf:type owl:NamedIndividual ,
+                                                                                                    [ rdf:type owl:Class ;
+                                                                                                      owl:complementOf :MonteRace
+                                                                                                    ] ;
+                                                                                           :name "Elitloppet 1986" .
+
+
+###  http://www.semanticweb.org/borgebj/ontologies/2025/3/untitled-ontology-3#:Kjell
+<http://www.semanticweb.org/borgebj/ontologies/2025/3/untitled-ontology-3#:Kjell> rdf:type owl:NamedIndividual ;
+                                                                                  :name "Kjell Håkonsen" .
+
+
+###  http://www.semanticweb.org/borgebj/ontologies/2025/3/untitled-ontology-3#:Rex
+<http://www.semanticweb.org/borgebj/ontologies/2025/3/untitled-ontology-3#:Rex> rdf:type owl:NamedIndividual ;
+                                                                                :hasTrainer <http://www.semanticweb.org/borgebj/ontologies/2025/3/untitled-ontology-3#:Kjell> ;
+                                                                                :hasWon <http://www.semanticweb.org/borgebj/ontologies/2025/3/untitled-ontology-3#:Elitloppet1986> ;
+                                                                                :sire <http://www.semanticweb.org/borgebj/ontologies/2025/3/untitled-ontology-3#:Doctor> ;
+                                                                                :name "Rex Rodney" .
+
+
+###  http://www.semanticweb.org/borgebj/ontologies/2025/3/untitled-ontology-3#:SRG
+<http://www.semanticweb.org/borgebj/ontologies/2025/3/untitled-ontology-3#:SRG> rdf:type owl:NamedIndividual ,
+                                                                                         [ owl:intersectionOf ( :Filly
+                                                                                                                :MonteHorse
+                                                                                                              ) ;
+                                                                                           rdf:type owl:Class
+                                                                                         ] ;
+                                                                                :name "Steady, Ready, Go" .
+
+
+#################################################################
+#    General axioms
+#################################################################
+
+[ owl:intersectionOf ( :WarmbloodedHorse
+                       [ rdf:type owl:Restriction ;
+                         owl:onProperty :hasCompeted ;
+                         owl:someValuesFrom :MonteRace
+                       ]
+                     ) ;
+  rdf:type owl:Class ;
+  rdfs:subClassOf [ rdf:type owl:Restriction ;
+                    owl:onProperty :age ;
+                    owl:someValuesFrom [ rdf:type rdfs:Datatype ;
+                                         owl:onDatatype xsd:int ;
+                                         owl:withRestrictions ( [ xsd:minInclusive "4"^^xsd:int
+                                                                ]
+                                                                [ xsd:maxInclusive "12"^^xsd:int
+                                                                ]
+                                                              )
+                                       ]
+                  ]
+] .
+
+
+###  Generated by the OWL API (version 4.5.29.2024-05-13T12:11:03Z) https://github.com/owlcs/owlapi
