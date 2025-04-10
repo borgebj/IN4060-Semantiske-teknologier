@@ -418,6 +418,7 @@
     <!-- http://www.semanticweb.org/borgebj/ontologies/2025/3/untitled-ontology-3#:Rex -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/borgebj/ontologies/2025/3/untitled-ontology-3#:Rex">
+        <rdf:type rdf:resource="http://www.semanticweb.org/borgebj/ontologies/2025/3/untitled-ontology-3#SuperHorse"/>
         <hasTrainer rdf:resource="http://www.semanticweb.org/borgebj/ontologies/2025/3/untitled-ontology-3#:Kjell"/>
         <hasWon rdf:resource="http://www.semanticweb.org/borgebj/ontologies/2025/3/untitled-ontology-3#:Elitloppet1986"/>
         <sire rdf:resource="http://www.semanticweb.org/borgebj/ontologies/2025/3/untitled-ontology-3#:Doctor"/>
