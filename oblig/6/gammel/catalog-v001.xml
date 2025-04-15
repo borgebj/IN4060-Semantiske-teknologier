@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<catalog prefer="public" xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog">
+    <uri id="User Entered Import Resolution" name="http://www.semanticweb.org/borgebj/ontologies/2025/3/oblig6" uri="file:/uio/hume/student-u00/borgebj/Documents/IN4060-Semantiske-teknologier/oblig/6/racehorse.ttl"/>
+    <group id="Folder Repository, directory=, recursive=true, Auto-Update=true, version=2" prefer="public" xml:base="">
+        <uri id="Automatically generated entry, Timestamp=1744720150866" name="http://www.semanticweb.org/borgebj/ontologies/2025/3/mapping/" uri="oblig6-mapping.rdf"/>
+        <uri id="Automatically generated entry, Timestamp=1744720150866" name="http://www.semanticweb.org/borgebj/ontologies/2025/3/untitled-ontology-3" uri="oblig6.rdf"/>
+    </group>
+</catalog>
