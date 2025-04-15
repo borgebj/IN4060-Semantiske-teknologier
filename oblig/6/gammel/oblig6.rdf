@@ -1,0 +1,487 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.semanticweb.org/borgebj/ontologies/2025/3/untitled-ontology-3#"
+     xml:base="http://www.semanticweb.org/borgebj/ontologies/2025/3/untitled-ontology-3"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:oblig6="http://www.semanticweb.org/borgebj/ontologies/2025/3/oblig6#"
+     xmlns:untitled-ontology-3="http://www.semanticweb.org/borgebj/ontologies/2025/3/untitled-ontology-3#">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/borgebj/ontologies/2025/3/oblig6"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/borgebj/ontologies/2025/3/oblig6#ancestor -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/borgebj/ontologies/2025/3/oblig6#ancestor">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/borgebj/ontologies/2025/3/oblig6#dam -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/borgebj/ontologies/2025/3/oblig6#dam">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/borgebj/ontologies/2025/3/oblig6#ancestor"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/borgebj/ontologies/2025/3/oblig6#Horse"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/borgebj/ontologies/2025/3/oblig6#Horse"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/borgebj/ontologies/2025/3/oblig6#hadInterestIn -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/borgebj/ontologies/2025/3/oblig6#hadInterestIn">
+        <owl:propertyChainAxiom rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/borgebj/ontologies/2025/3/oblig6#trains"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/borgebj/ontologies/2025/3/oblig6#hasCompeted"/>
+        </owl:propertyChainAxiom>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/borgebj/ontologies/2025/3/oblig6#hasCompeted -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/borgebj/ontologies/2025/3/oblig6#hasCompeted">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/borgebj/ontologies/2025/3/oblig6#Horse"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/borgebj/ontologies/2025/3/oblig6#HorseRace"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/borgebj/ontologies/2025/3/oblig6#hasTrainer -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/borgebj/ontologies/2025/3/oblig6#hasTrainer">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/borgebj/ontologies/2025/3/oblig6#trains"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/borgebj/ontologies/2025/3/oblig6#Horse"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/borgebj/ontologies/2025/3/oblig6#Person"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/borgebj/ontologies/2025/3/oblig6#hasWon -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/borgebj/ontologies/2025/3/oblig6#hasWon">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/borgebj/ontologies/2025/3/oblig6#hasCompeted"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/borgebj/ontologies/2025/3/oblig6#sire -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/borgebj/ontologies/2025/3/oblig6#sire">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/borgebj/ontologies/2025/3/oblig6#ancestor"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/borgebj/ontologies/2025/3/oblig6#Horse"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/borgebj/ontologies/2025/3/oblig6#Horse"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/borgebj/ontologies/2025/3/oblig6#trains -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/borgebj/ontologies/2025/3/oblig6#trains">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/borgebj/ontologies/2025/3/oblig6#Person"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/borgebj/ontologies/2025/3/oblig6#Horse"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/borgebj/ontologies/2025/3/oblig6#age -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/borgebj/ontologies/2025/3/oblig6#age">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/borgebj/ontologies/2025/3/oblig6#name -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/borgebj/ontologies/2025/3/oblig6#name">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/borgebj/ontologies/2025/3/oblig6#Animal -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/borgebj/ontologies/2025/3/oblig6#Animal">
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/borgebj/ontologies/2025/3/oblig6#Female"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/borgebj/ontologies/2025/3/oblig6#Male"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/borgebj/ontologies/2025/3/oblig6#ColdbloodedHorse -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/borgebj/ontologies/2025/3/oblig6#ColdbloodedHorse">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/borgebj/ontologies/2025/3/oblig6#Horse"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/borgebj/ontologies/2025/3/oblig6#WarmbloodedHorse"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/borgebj/ontologies/2025/3/oblig6#Female -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/borgebj/ontologies/2025/3/oblig6#Female">
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/borgebj/ontologies/2025/3/oblig6#Male"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/borgebj/ontologies/2025/3/oblig6#Filly -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/borgebj/ontologies/2025/3/oblig6#Filly">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/borgebj/ontologies/2025/3/oblig6#Female"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/borgebj/ontologies/2025/3/oblig6#Horse"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/borgebj/ontologies/2025/3/oblig6#age"/>
+                        <owl:allValuesFrom>
+                            <rdfs:Datatype>
+                                <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+                                <owl:withRestrictions rdf:parseType="Collection">
+                                    <rdf:Description>
+                                        <xsd:maxExclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#int">4</xsd:maxExclusive>
+                                    </rdf:Description>
+                                </owl:withRestrictions>
+                            </rdfs:Datatype>
+                        </owl:allValuesFrom>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/borgebj/ontologies/2025/3/oblig6#Horse -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/borgebj/ontologies/2025/3/oblig6#Horse">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/borgebj/ontologies/2025/3/oblig6#Animal"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/borgebj/ontologies/2025/3/oblig6#dam"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass>
+                    <owl:Class>
+                        <owl:intersectionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://www.semanticweb.org/borgebj/ontologies/2025/3/oblig6#Female"/>
+                            <rdf:Description rdf:about="http://www.semanticweb.org/borgebj/ontologies/2025/3/oblig6#Horse"/>
+                        </owl:intersectionOf>
+                    </owl:Class>
+                </owl:onClass>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/borgebj/ontologies/2025/3/oblig6#sire"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass>
+                    <owl:Class>
+                        <owl:intersectionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://www.semanticweb.org/borgebj/ontologies/2025/3/oblig6#Horse"/>
+                            <rdf:Description rdf:about="http://www.semanticweb.org/borgebj/ontologies/2025/3/oblig6#Male"/>
+                        </owl:intersectionOf>
+                    </owl:Class>
+                </owl:onClass>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/borgebj/ontologies/2025/3/oblig6#HorseRace"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/borgebj/ontologies/2025/3/oblig6#HorseRace -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/borgebj/ontologies/2025/3/oblig6#HorseRace"/>
+    
+
+
+    <!-- http://www.semanticweb.org/borgebj/ontologies/2025/3/oblig6#Male -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/borgebj/ontologies/2025/3/oblig6#Male"/>
+    
+
+
+    <!-- http://www.semanticweb.org/borgebj/ontologies/2025/3/oblig6#MonteHorse -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/borgebj/ontologies/2025/3/oblig6#MonteHorse">
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/borgebj/ontologies/2025/3/oblig6#RaceHorse"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/borgebj/ontologies/2025/3/oblig6#hasCompeted"/>
+                        <owl:allValuesFrom rdf:resource="http://www.semanticweb.org/borgebj/ontologies/2025/3/oblig6#MonteRace"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/borgebj/ontologies/2025/3/oblig6#MonteRace -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/borgebj/ontologies/2025/3/oblig6#MonteRace">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/borgebj/ontologies/2025/3/oblig6#HorseRace"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/borgebj/ontologies/2025/3/oblig6#Person -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/borgebj/ontologies/2025/3/oblig6#Person">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/borgebj/ontologies/2025/3/oblig6#name"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <owl:disjointUnionOf rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/borgebj/ontologies/2025/3/oblig6#Horse"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/borgebj/ontologies/2025/3/oblig6#HorseRace"/>
+        </owl:disjointUnionOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/borgebj/ontologies/2025/3/oblig6#RaceHorse -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/borgebj/ontologies/2025/3/oblig6#RaceHorse">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/borgebj/ontologies/2025/3/oblig6#Horse"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/borgebj/ontologies/2025/3/oblig6#hasCompeted"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/borgebj/ontologies/2025/3/oblig6#HorseRace"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/borgebj/ontologies/2025/3/oblig6#hasTrainer"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/borgebj/ontologies/2025/3/oblig6#Person"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/borgebj/ontologies/2025/3/oblig6#name"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <owl:hasKey rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/borgebj/ontologies/2025/3/oblig6#name"/>
+        </owl:hasKey>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/borgebj/ontologies/2025/3/oblig6#Stallion -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/borgebj/ontologies/2025/3/oblig6#Stallion">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/borgebj/ontologies/2025/3/oblig6#Horse"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/borgebj/ontologies/2025/3/oblig6#Male"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/borgebj/ontologies/2025/3/oblig6#age"/>
+                        <owl:allValuesFrom>
+                            <rdfs:Datatype>
+                                <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+                                <owl:withRestrictions rdf:parseType="Collection">
+                                    <rdf:Description>
+                                        <xsd:minInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#int">4</xsd:minInclusive>
+                                    </rdf:Description>
+                                </owl:withRestrictions>
+                            </rdfs:Datatype>
+                        </owl:allValuesFrom>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/borgebj/ontologies/2025/3/oblig6#SuperHorse -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/borgebj/ontologies/2025/3/oblig6#SuperHorse">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/borgebj/ontologies/2025/3/oblig6#RaceHorse"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/borgebj/ontologies/2025/3/oblig6#hasWon"/>
+                        <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">101</owl:minQualifiedCardinality>
+                        <owl:onClass rdf:resource="http://www.semanticweb.org/borgebj/ontologies/2025/3/oblig6#HorseRace"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/borgebj/ontologies/2025/3/oblig6#WarmbloodedHorse -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/borgebj/ontologies/2025/3/oblig6#WarmbloodedHorse">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/borgebj/ontologies/2025/3/oblig6#Horse"/>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/borgebj/ontologies/2025/3/oblig6#:Doctor -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/borgebj/ontologies/2025/3/oblig6#:Doctor">
+        <oblig6:name>Doctor Rodney</oblig6:name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/borgebj/ontologies/2025/3/oblig6#:Elitloppet1986 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/borgebj/ontologies/2025/3/oblig6#:Elitloppet1986">
+        <rdf:type>
+            <owl:Class>
+                <owl:complementOf rdf:resource="http://www.semanticweb.org/borgebj/ontologies/2025/3/oblig6#MonteRace"/>
+            </owl:Class>
+        </rdf:type>
+        <oblig6:name>Elitloppet 1986</oblig6:name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/borgebj/ontologies/2025/3/oblig6#:Kjell -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/borgebj/ontologies/2025/3/oblig6#:Kjell">
+        <oblig6:name>Kjell Håkonsen</oblig6:name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/borgebj/ontologies/2025/3/oblig6#:Rex -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/borgebj/ontologies/2025/3/oblig6#:Rex">
+        <rdf:type rdf:resource="http://www.semanticweb.org/borgebj/ontologies/2025/3/oblig6#SuperHorse"/>
+        <oblig6:hasTrainer rdf:resource="http://www.semanticweb.org/borgebj/ontologies/2025/3/oblig6#:Kjell"/>
+        <oblig6:hasWon rdf:resource="http://www.semanticweb.org/borgebj/ontologies/2025/3/oblig6#:Elitloppet1986"/>
+        <oblig6:sire rdf:resource="http://www.semanticweb.org/borgebj/ontologies/2025/3/oblig6#:Doctor"/>
+        <oblig6:name>Rex Rodney</oblig6:name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/borgebj/ontologies/2025/3/oblig6#:SRG -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/borgebj/ontologies/2025/3/oblig6#:SRG">
+        <rdf:type>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/borgebj/ontologies/2025/3/oblig6#Filly"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/borgebj/ontologies/2025/3/oblig6#MonteHorse"/>
+                </owl:intersectionOf>
+            </owl:Class>
+        </rdf:type>
+        <oblig6:name>Steady, Ready, Go</oblig6:name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // General axioms
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <owl:Class>
+        <owl:intersectionOf rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/borgebj/ontologies/2025/3/oblig6#WarmbloodedHorse"/>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/borgebj/ontologies/2025/3/oblig6#hasCompeted"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/borgebj/ontologies/2025/3/oblig6#MonteRace"/>
+            </owl:Restriction>
+        </owl:intersectionOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/borgebj/ontologies/2025/3/oblig6#age"/>
+                <owl:someValuesFrom>
+                    <rdfs:Datatype>
+                        <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+                        <owl:withRestrictions rdf:parseType="Collection">
+                            <rdf:Description>
+                                <xsd:minInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#int">4</xsd:minInclusive>
+                            </rdf:Description>
+                            <rdf:Description>
+                                <xsd:maxInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#int">12</xsd:maxInclusive>
+                            </rdf:Description>
+                        </owl:withRestrictions>
+                    </rdfs:Datatype>
+                </owl:someValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.29.2024-05-13T12:11:03Z) https://github.com/owlcs/owlapi -->
+

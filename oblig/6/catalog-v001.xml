@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<catalog prefer="public" xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog">
+    <uri id="Imports Wizard Entry" name="http://sws.ifi.uio.no/inf3580/v14/oblig/6/racehorse" uri="racehorse.ttl"/>
+    <uri id="Imports Wizard Entry" name="http://sws.ifi.uio.no/inf3580/v14/oblig/6/racehorse" uri="racehorse.ttl"/>
+    <uri id="Imports Wizard Entry" name="http://www.semanticweb.org/borgebj/ontologies/2025/3/oblig6" uri="oblig6_2.rdf"/>
+    <uri id="Imports Wizard Entry" name="http://sws.ifi.uio.no/inf3580/v14/oblig/6/racehorse" uri="https://www.uio.no/studier/emner/matnat/ifi/IN3060/v21/obliger/oblig6_files/racehorse.ttl"/>
+    <uri id="Imports Wizard Entry" name="http://www.semanticweb.org/borgebj/ontologies/2025/3/oblig6" uri="oblig6_2.rdf"/>
+    <uri id="Imports Wizard Entry" name="http://www.semanticweb.org/borgebj/ontologies/2025/3/oblig6" uri="oblig6.rdf"/>
+    <uri id="Imports Wizard Entry" name="http://sws.ifi.uio.no/inf3580/v14/oblig/6/racehorse" uri="racehorse.ttl"/>
+    <group id="Folder Repository, directory=, recursive=true, Auto-Update=true, version=2" prefer="public" xml:base="">
+        <uri id="Automatically generated entry, Timestamp=1744721995535" name="http://www.semanticweb.org/borgebj/ontologies/2025/3/mapping/" uri="mapping.rdf"/>
+        <uri id="Automatically generated entry, Timestamp=1744721995535" name="http://www.semanticweb.org/borgebj/ontologies/2025/3/untitled-ontology-3" uri="oblig6_2.rdf"/>
+        <uri id="Automatically generated entry, Timestamp=1744721995535" name="shadowed:http://www.semanticweb.org/borgebj/ontologies/2025/3/mapping/" uri="gammel/oblig6-mapping.rdf"/>
+        <uri id="Automatically generated entry, Timestamp=1744721995535" name="shadowed:http://www.semanticweb.org/borgebj/ontologies/2025/3/untitled-ontology-3" uri="gammel/oblig6.rdf"/>
+    </group>
+</catalog>
