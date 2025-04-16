@@ -1,12 +1,12 @@
 <?xml version="1.0"?>
-<rdf:RDF xmlns="http://www.semanticweb.org/borgebj/ontologies/2025/3/mapping/"
-     xml:base="http://www.semanticweb.org/borgebj/ontologies/2025/3/mapping/"
+<rdf:RDF xmlns="http://www.semanticweb.org/bbj/ontologies/2025/3/mapping/"
+     xml:base="http://www.semanticweb.org/bbj/ontologies/2025/3/mapping/"
      xmlns:owl="http://www.w3.org/2002/07/owl#"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
      xmlns:xml="http://www.w3.org/XML/1998/namespace"
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
-    <owl:Ontology rdf:about="http://www.semanticweb.org/borgebj/ontologies/2025/3/mapping">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/bbj/ontologies/2025/3/mapping">
         <owl:imports rdf:resource="http://sws.ifi.uio.no/inf3580/v14/oblig/6/racehorse"/>
         <owl:imports rdf:resource="http://www.semanticweb.org/borgebj/ontologies/2025/3/oblig6"/>
     </owl:Ontology>
@@ -150,68 +150,6 @@
     
 
 
-    <!-- http://www.semanticweb.org/borgebj/ontologies/2025/3/oblig6#age -->
-
-    <rdf:Description rdf:about="http://www.semanticweb.org/borgebj/ontologies/2025/3/oblig6#age">
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
-    </rdf:Description>
-    
-
-
-    <!-- http://www.semanticweb.org/borgebj/ontologies/2025/3/oblig6#name -->
-
-    <rdf:Description rdf:about="http://www.semanticweb.org/borgebj/ontologies/2025/3/oblig6#name">
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
-    </rdf:Description>
-    
-
-
-    <!-- 
-    ///////////////////////////////////////////////////////////////////////////////////////
-    //
-    // Classes
-    //
-    ///////////////////////////////////////////////////////////////////////////////////////
-     -->
-
-    
-
-
-    <!-- http://www.semanticweb.org/borgebj/ontologies/2025/3/oblig6#Horse -->
-
-    <rdf:Description rdf:about="http://www.semanticweb.org/borgebj/ontologies/2025/3/oblig6#Horse">
-        <owl:disjointWith rdf:resource="http://www.semanticweb.org/borgebj/ontologies/2025/3/oblig6#Person"/>
-    </rdf:Description>
-    
-
-
-    <!-- http://www.semanticweb.org/borgebj/ontologies/2025/3/oblig6#HorseRace -->
-
-    <rdf:Description rdf:about="http://www.semanticweb.org/borgebj/ontologies/2025/3/oblig6#HorseRace">
-        <owl:disjointWith rdf:resource="http://www.semanticweb.org/borgebj/ontologies/2025/3/oblig6#Person"/>
-    </rdf:Description>
-    
-
-
-    <!-- 
-    ///////////////////////////////////////////////////////////////////////////////////////
-    //
-    // Individuals
-    //
-    ///////////////////////////////////////////////////////////////////////////////////////
-     -->
-
-    
-
-
-    <!-- http://dbpedia.org/resource/Stallion -->
-
-    <rdf:Description rdf:about="http://dbpedia.org/resource/Stallion">
-        <rdf:type rdf:resource="http://www.semanticweb.org/borgebj/ontologies/2025/3/oblig6#Stallion"/>
-    </rdf:Description>
-    
-
-
     <!-- 
     ///////////////////////////////////////////////////////////////////////////////////////
     //
@@ -220,6 +158,16 @@
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
 
+    <owl:Class>
+        <owl:intersectionOf rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/borgebj/ontologies/2025/3/oblig6#Horse"/>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://dbpedia.org/property/sex"/>
+                <owl:hasValue rdf:resource="http://dbpedia.org/resource/Stallion"/>
+            </owl:Restriction>
+        </owl:intersectionOf>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/borgebj/ontologies/2025/3/oblig6#Stallion"/>
+    </owl:Class>
     <owl:Class>
         <owl:intersectionOf rdf:parseType="Collection">
             <rdf:Description rdf:about="http://www.semanticweb.org/borgebj/ontologies/2025/3/oblig6#Horse"/>
