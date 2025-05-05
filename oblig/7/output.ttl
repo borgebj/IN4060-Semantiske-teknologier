@@ -1,0 +1,1689 @@
+PREFIX geo: <http://www.w3.org/2003/01/geo/wgs84_pos#>
+PREFIX ex: <http://example.com/ns#>
+PREFIX dbpo: <http://dbpedia.org/ontology/>
+PREFIX o-rdf: <http://tpl.ottr.xyz/rdf/0.1/>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX ottr: <http://ns.ottr.xyz/0.4/>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+
+_:b0    geo:location  _:b1 .
+
+_:b1    geo:long        5.734144;
+        rdf:type        geo:Point;
+        geo:lat         58.937090;
+        dc:description  "Kristianlyst skole" .
+
+_:b0    dc:date     "1971"^^xsd:gYear;
+        dc:creator  _:b2;
+        rdf:type    dbpo:Sculpture;
+        dc:title    "Akrobatfamilien" .
+
+_:b2    foaf:name  "Hugo Frank Wathne";
+        rdf:type   foaf:Person .
+
+_:b3    geo:location  _:b4 .
+
+_:b4    geo:long        5.731962;
+        rdf:type        geo:Point;
+        geo:lat         58.969712;
+        dc:description  "Torget" .
+
+_:b3    dc:date     "1928"^^xsd:gYear;
+        dc:creator  _:b5;
+        rdf:type    dbpo:Sculpture;
+        dc:title    "Alexander L. Kjelland" .
+
+_:b5    foaf:name  "Magnus Vigrestad";
+        rdf:type   foaf:Person .
+
+_:b6    geo:location  _:b7 .
+
+_:b7    geo:long        5.731920;
+        rdf:type        geo:Point;
+        geo:lat         58.968967;
+        dc:description  "Kongsgård skole" .
+
+_:b6    dc:date     "1953"^^xsd:gYear;
+        dc:creator  _:b8;
+        rdf:type    dbpo:Sculpture;
+        dc:title    "Andemor" .
+
+_:b8    foaf:name  "Eirik Haugland";
+        rdf:type   foaf:Person .
+
+_:b9    geo:location  _:b10 .
+
+_:b10   geo:long        5.746487;
+        rdf:type        geo:Point;
+        geo:lat         58.965393;
+        dc:description  "Parken til Alders Hvile Storhaugveien 40" .
+
+_:b9    dc:date     "1938"^^xsd:gYear;
+        dc:creator  _:b11;
+        rdf:type    dbpo:Sculpture;
+        dc:title    "Andreas Bærem Olsen" .
+
+_:b11   foaf:name  "Ottar Espeland";
+        rdf:type   foaf:Person .
+
+_:b12   geo:location  _:b13 .
+
+_:b13   geo:long        5.750125;
+        rdf:type        geo:Point;
+        geo:lat         58.964988;
+        dc:description  "Kunstverket henger i gangbrua mellom skole- og gymnastikkbygget på Nylund skole" .
+
+_:b12   dc:date     "2006"^^xsd:gYear;
+        dc:creator  _:b14;
+        rdf:type    dbpo:Sculpture;
+        dc:title    "Animal Shape" .
+
+_:b14   foaf:name  "Intravision bestående av Per Åge Lyså Bjarne Kvimsland og Yngve Sandboe";
+        rdf:type   foaf:Person .
+
+_:b15   geo:location  _:b16 .
+
+_:b16   geo:long        5.733683;
+        rdf:type        geo:Point;
+        geo:lat         58.969126;
+        dc:description  "Byparken" .
+
+_:b15   dc:date     "1931"^^xsd:gYear;
+        dc:creator  _:b17;
+        rdf:type    dbpo:Sculpture;
+        dc:title    "Arne Garborg" .
+
+_:b17   foaf:name  "Gunnar Janson";
+        rdf:type   foaf:Person .
+
+_:b18   geo:location  _:b19 .
+
+_:b19   geo:long        5.702458;
+        rdf:type        geo:Point;
+        geo:lat         58.955818;
+        dc:description  "Mostunhagen ved Rogaland Kunstmuseum" .
+
+_:b18   dc:date     "2004"^^xsd:gYear;
+        dc:creator  _:b20;
+        rdf:type    dbpo:Sculpture;
+        dc:title    "Barbarkvinnen" .
+
+_:b20   foaf:name  "Magnus Vigrestad";
+        rdf:type   foaf:Person .
+
+_:b21   geo:location  _:b22 .
+
+_:b22   geo:long        5.722519;
+        rdf:type        geo:Point;
+        geo:lat         58.967574;
+        dc:description  "Ved Hermetikkindustriens laboratorium på Eiganes" .
+
+_:b21   dc:date     "1931"^^xsd:gYear;
+        dc:creator  _:b23;
+        rdf:type    dbpo:Sculpture;
+        dc:title    "Barcelonafiskerne" .
+
+_:b23   foaf:name  "Erik Haugland";
+        rdf:type   foaf:Person .
+
+_:b24   geo:location  _:b25 .
+
+_:b25   geo:long        5.748347;
+        rdf:type        geo:Point;
+        geo:lat         58.965239;
+        dc:description  "Taugata/Avaldsnesgata på Storhaug" .
+
+_:b24   dc:date     "1956"^^xsd:gYear;
+        dc:creator  _:b26;
+        rdf:type    dbpo:Sculpture;
+        dc:title    "Barn med fugler" .
+
+_:b26   foaf:name  "Irma Bruun Hodne";
+        rdf:type   foaf:Person .
+
+_:b27   geo:location  _:b28 .
+
+_:b28   geo:long        5.731615;
+        rdf:type        geo:Point;
+        geo:lat         58.969027;
+        dc:description  "Kiellandhagen ved Breiavatnet" .
+
+_:b27   dc:date     "1998"^^xsd:gYear;
+        dc:creator  _:b29;
+        rdf:type    dbpo:Sculpture;
+        dc:title    "Been (Kitty Kielland)" .
+
+_:b29   foaf:name  "Marit Aanestad";
+        rdf:type   foaf:Person .
+
+_:b30   geo:location  _:b31 .
+
+_:b31   geo:long        5.720016;
+        rdf:type        geo:Point;
+        geo:lat         58.975923;
+        dc:description  "Bybergplassen" .
+
+_:b30   dc:date     "1995"^^xsd:gYear;
+        dc:creator  _:b32;
+        rdf:type    dbpo:Sculpture;
+        dc:title    "Bertram C. Middelthon" .
+
+_:b32   foaf:name  "Erik Haugland";
+        rdf:type   foaf:Person .
+
+_:b33   geo:location  _:b34 .
+
+_:b34   geo:long        5.715411;
+        rdf:type        geo:Point;
+        geo:lat         58.972374;
+        dc:description  "Kampens plass" .
+
+_:b33   dc:date     "1994"^^xsd:gYear;
+        dc:creator  _:b35;
+        rdf:type    dbpo:Sculpture;
+        dc:title    "Bestemor og barn" .
+
+_:b35   foaf:name  "Gøril Førsund";
+        rdf:type   foaf:Person .
+
+_:b36   geo:location  _:b37 .
+
+_:b37   geo:long        5.733244;
+        rdf:type        geo:Point;
+        geo:lat         58.976556;
+        dc:description  "Natvigs Minde" .
+
+_:b36   dc:date     "2003"^^xsd:gYear;
+        dc:creator  _:b38;
+        rdf:type    dbpo:Sculpture;
+        dc:title    "Broken Column 00" .
+
+_:b38   foaf:name  "Antony Gormley";
+        rdf:type   foaf:Person .
+
+_:b39   geo:location  _:b40 .
+
+_:b40   geo:long        5.730407;
+        rdf:type        geo:Point;
+        geo:lat         58.970509;
+        dc:description  "Indre vågen Fiskeutsalget" .
+
+_:b39   dc:date     "2003"^^xsd:gYear;
+        dc:creator  _:b41;
+        rdf:type    dbpo:Sculpture;
+        dc:title    "Broken Column 01" .
+
+_:b41   foaf:name  "Antony Gormley";
+        rdf:type   foaf:Person .
+
+_:b42   geo:location  _:b43 .
+
+_:b43   geo:long        5.724900;
+        rdf:type        geo:Point;
+        geo:lat         58.972700;
+        dc:description  "Strandkaien Tilfluktsrom" .
+
+_:b42   dc:date     "2003"^^xsd:gYear;
+        dc:creator  _:b44;
+        rdf:type    dbpo:Sculpture;
+        dc:title    "Broken Column 02" .
+
+_:b44   foaf:name  "Antony Gormley";
+        rdf:type   foaf:Person .
+
+_:b45   geo:location  _:b46 .
+
+_:b46   geo:long        5.733933;
+        rdf:type        geo:Point;
+        geo:lat         58.972556;
+        dc:description  "Breigata 14 Butikk" .
+
+_:b45   dc:date     "2003"^^xsd:gYear;
+        dc:creator  _:b47;
+        rdf:type    dbpo:Sculpture;
+        dc:title    "Broken Column 03" .
+
+_:b47   foaf:name  "Antony Gormley";
+        rdf:type   foaf:Person .
+
+_:b48   geo:location  _:b49 .
+
+_:b49   geo:long        5.731588;
+        rdf:type        geo:Point;
+        geo:lat         58.971981;
+        dc:description  "Valberget Parkeringshallen" .
+
+_:b48   dc:date     "2003"^^xsd:gYear;
+        dc:creator  _:b50;
+        rdf:type    dbpo:Sculpture;
+        dc:title    "Broken Column 04" .
+
+_:b50   foaf:name  "Antony Gormley";
+        rdf:type   foaf:Person .
+
+_:b51   geo:location  _:b52 .
+
+_:b52   geo:long        5.733237;
+        rdf:type        geo:Point;
+        geo:lat         58.970985;
+        dc:description  "Arneageren" .
+
+_:b51   dc:date     "2003"^^xsd:gYear;
+        dc:creator  _:b53;
+        rdf:type    dbpo:Sculpture;
+        dc:title    "Broken Column 05" .
+
+_:b53   foaf:name  "Antony Gormley";
+        rdf:type   foaf:Person .
+
+_:b54   geo:location  _:b55 .
+
+_:b55   geo:long        5.733670;
+        rdf:type        geo:Point;
+        geo:lat         58.969848;
+        dc:description  "Stavanger domkirke" .
+
+_:b54   dc:date     "2003"^^xsd:gYear;
+        dc:creator  _:b56;
+        rdf:type    dbpo:Sculpture;
+        dc:title    "Broken Column 06" .
+
+_:b56   foaf:name  "Antony Gormley";
+        rdf:type   foaf:Person .
+
+_:b57   geo:location  _:b58 .
+
+_:b58   geo:long        5.736712;
+        rdf:type        geo:Point;
+        geo:lat         58.963966;
+        dc:description  "Kirkegårdsveien" .
+
+_:b57   dc:date     "2003"^^xsd:gYear;
+        dc:creator  _:b59;
+        rdf:type    dbpo:Sculpture;
+        dc:title    "Broken Column 07" .
+
+_:b59   foaf:name  "Antony Gormley";
+        rdf:type   foaf:Person .
+
+_:b60   geo:location  _:b61 .
+
+_:b61   geo:long        5.750845;
+        rdf:type        geo:Point;
+        geo:lat         58.968849;
+        dc:description  "Haugesundsgata 3 Statoil" .
+
+_:b60   dc:date     "2003"^^xsd:gYear;
+        dc:creator  _:b62;
+        rdf:type    dbpo:Sculpture;
+        dc:title    "Broken Column 08" .
+
+_:b62   foaf:name  "Antony Gormley";
+        rdf:type   foaf:Person .
+
+_:b63   geo:location  _:b64 .
+
+_:b64   geo:long        5.728300;
+        rdf:type        geo:Point;
+        geo:lat         58.969400;
+        dc:description  "Stavanger Svømmehallen" .
+
+_:b63   dc:date     "2003"^^xsd:gYear;
+        dc:creator  _:b65;
+        rdf:type    dbpo:Sculpture;
+        dc:title    "Broken Column 09" .
+
+_:b65   foaf:name  "Antony Gormley";
+        rdf:type   foaf:Person .
+
+_:b66   geo:location  _:b67 .
+
+_:b67   geo:long        5.736500;
+        rdf:type        geo:Point;
+        geo:lat         58.969300;
+        dc:description  "Stavanger tinghus" .
+
+_:b66   dc:date     "2003"^^xsd:gYear;
+        dc:creator  _:b68;
+        rdf:type    dbpo:Sculpture;
+        dc:title    "Broken Column 10" .
+
+_:b68   foaf:name  "Antony Gormley";
+        rdf:type   foaf:Person .
+
+_:b69   geo:location  _:b70 .
+
+_:b70   geo:long        5.729447;
+        rdf:type        geo:Point;
+        geo:lat         58.967418;
+        dc:description  "Jens Zetlitz gate St. Olav-strøket" .
+
+_:b69   dc:date     "2003"^^xsd:gYear;
+        dc:creator  _:b71;
+        rdf:type    dbpo:Sculpture;
+        dc:title    "Broken Column 11" .
+
+_:b71   foaf:name  "Antony Gormley";
+        rdf:type   foaf:Person .
+
+_:b72   geo:location  _:b73 .
+
+_:b73   geo:long        5.747445;
+        rdf:type        geo:Point;
+        geo:lat         58.969050;
+        dc:description  "Kjelvene" .
+
+_:b72   dc:date     "2003"^^xsd:gYear;
+        dc:creator  _:b74;
+        rdf:type    dbpo:Sculpture;
+        dc:title    "Broken Column 12" .
+
+_:b74   foaf:name  "Antony Gormley";
+        rdf:type   foaf:Person .
+
+_:b75   geo:location  _:b76 .
+
+_:b76   geo:long        5.739633;
+        rdf:type        geo:Point;
+        geo:lat         58.968967;
+        dc:description  "Hetlandsgata 53 Privat hjem" .
+
+_:b75   dc:date     "2003"^^xsd:gYear;
+        dc:creator  _:b77;
+        rdf:type    dbpo:Sculpture;
+        dc:title    "Broken Column 13" .
+
+_:b77   foaf:name  "Antony Gormley";
+        rdf:type   foaf:Person .
+
+_:b78   geo:location  _:b79 .
+
+_:b79   geo:long        5.732615;
+        rdf:type        geo:Point;
+        geo:lat         58.964502;
+        dc:description  "Musegata Bussholdeplass" .
+
+_:b78   dc:date     "2003"^^xsd:gYear;
+        dc:creator  _:b80;
+        rdf:type    dbpo:Sculpture;
+        dc:title    "Broken Column 14" .
+
+_:b80   foaf:name  "Antony Gormley";
+        rdf:type   foaf:Person .
+
+_:b81   geo:location  _:b82 .
+
+_:b82   geo:long        5.727600;
+        rdf:type        geo:Point;
+        geo:lat         58.964100;
+        dc:description  "Madlaveien" .
+
+_:b81   dc:date     "2003"^^xsd:gYear;
+        dc:creator  _:b83;
+        rdf:type    dbpo:Sculpture;
+        dc:title    "Broken Column 15" .
+
+_:b83   foaf:name  "Antony Gormley";
+        rdf:type   foaf:Person .
+
+_:b84   geo:location  _:b85 .
+
+_:b85   geo:long        5.725700;
+        rdf:type        geo:Point;
+        geo:lat         58.969800;
+        dc:description  "Henrik Steffens gate" .
+
+_:b84   dc:date     "2003"^^xsd:gYear;
+        dc:creator  _:b86;
+        rdf:type    dbpo:Sculpture;
+        dc:title    "Broken Column 16" .
+
+_:b86   foaf:name  "Antony Gormley";
+        rdf:type   foaf:Person .
+
+_:b87   geo:location  _:b88 .
+
+_:b88   geo:long        5.739900;
+        rdf:type        geo:Point;
+        geo:lat         58.964600;
+        dc:description  "St Svithun skole Klasserom 204" .
+
+_:b87   dc:date     "2003"^^xsd:gYear;
+        dc:creator  _:b89;
+        rdf:type    dbpo:Sculpture;
+        dc:title    "Broken Column 17" .
+
+_:b89   foaf:name  "Antony Gormley";
+        rdf:type   foaf:Person .
+
+_:b90   geo:location  _:b91 .
+
+_:b91   geo:long        5.721959;
+        rdf:type        geo:Point;
+        geo:lat         58.960296;
+        dc:description  "Kiellandsmyrå Fotballøkka" .
+
+_:b90   dc:date     "2003"^^xsd:gYear;
+        dc:creator  _:b92;
+        rdf:type    dbpo:Sculpture;
+        dc:title    "Broken Column 18" .
+
+_:b92   foaf:name  "Antony Gormley";
+        rdf:type   foaf:Person .
+
+_:b93   geo:location  _:b94 .
+
+_:b94   geo:long        5.721997;
+        rdf:type        geo:Point;
+        geo:lat         58.972197;
+        dc:description  "Lars Hertervigs plass" .
+
+_:b93   dc:date     "2003"^^xsd:gYear;
+        dc:creator  _:b95;
+        rdf:type    dbpo:Sculpture;
+        dc:title    "Broken Column 19" .
+
+_:b95   foaf:name  "Antony Gormley";
+        rdf:type   foaf:Person .
+
+_:b96   geo:location  _:b97 .
+
+_:b97   geo:long        5.724300;
+        rdf:type        geo:Point;
+        geo:lat         58.968500;
+        dc:description  "Solvang skole Gårdsplass" .
+
+_:b96   dc:date     "2003"^^xsd:gYear;
+        dc:creator  _:b98;
+        rdf:type    dbpo:Sculpture;
+        dc:title    "Broken Column 20" .
+
+_:b98   foaf:name  "Antony Gormley";
+        rdf:type   foaf:Person .
+
+_:b99   geo:location  _:b100 .
+
+_:b100  geo:long        5.707945;
+        rdf:type        geo:Point;
+        geo:lat         58.960477;
+        dc:description  "Mosvannsparken" .
+
+_:b99   dc:date     "2003"^^xsd:gYear;
+        dc:creator  _:b101;
+        rdf:type    dbpo:Sculpture;
+        dc:title    "Broken Column 21" .
+
+_:b101  foaf:name  "Antony Gormley";
+        rdf:type   foaf:Person .
+
+_:b102  geo:location  _:b103 .
+
+_:b103  geo:long        5.702900;
+        rdf:type        geo:Point;
+        geo:lat         58.955200;
+        dc:description  "Rogaland Kunstmuseum" .
+
+_:b102  dc:date     "2003"^^xsd:gYear;
+        dc:creator  _:b104;
+        rdf:type    dbpo:Sculpture;
+        dc:title    "Broken Column 22" .
+
+_:b104  foaf:name  "Antony Gormley";
+        rdf:type   foaf:Person .
+
+_:b105  geo:location  _:b106 .
+
+_:b106  geo:long        5.593870;
+        rdf:type        geo:Point;
+        geo:lat         58.970526;
+        dc:description  "Ytterst ute ved havet på Smiodden i Kvernevik" .
+
+_:b105  dc:date     "1986"^^xsd:gYear;
+        dc:creator  _:b107;
+        rdf:type    dbpo:Sculpture;
+        dc:title    "Brutt lenke" .
+
+_:b107  foaf:name  "Johannes Bloch Hellum";
+        rdf:type   foaf:Person .
+
+_:b108  geo:location  _:b109 .
+
+_:b109  geo:long        5.719146;
+        rdf:type        geo:Point;
+        geo:lat         58.957229;
+        dc:description  "Mosvannsparken" .
+
+_:b108  dc:date     "1986"^^xsd:gYear;
+        dc:creator  _:b110;
+        rdf:type    dbpo:Sculpture;
+        dc:title    "Bølgen" .
+
+_:b110  foaf:name  "Marit Lyckander";
+        rdf:type   foaf:Person .
+
+_:b111  geo:location  _:b112 .
+
+_:b112  geo:long        5.728391;
+        rdf:type        geo:Point;
+        geo:lat         58.969096;
+        dc:description  "Kleivaparken" .
+
+_:b111  dc:date     "2001"^^xsd:gYear;
+        dc:creator  _:b113;
+        rdf:type    dbpo:Sculpture;
+        dc:title    "Børge Olsen-Hagen" .
+
+_:b113  foaf:name  "Kristoff Nasilowski";
+        rdf:type   foaf:Person .
+
+_:b114  geo:location  _:b115 .
+
+_:b115  geo:long        5.747896;
+        rdf:type        geo:Point;
+        geo:lat         58.971836;
+        dc:description  "Christian Bjellands plass på Verven." .
+
+_:b114  dc:date     "1915"^^xsd:gYear;
+        dc:creator  _:b116;
+        rdf:type    dbpo:Sculpture;
+        dc:title    "Christian Bjelland" .
+
+_:b116  foaf:name  "Sofus Madsen (usikkert)";
+        rdf:type   foaf:Person .
+
+_:b117  geo:location  _:b118 .
+
+_:b118  geo:long        5.729727;
+        rdf:type        geo:Point;
+        geo:lat         58.968504;
+        dc:description  "Kleivaparken" .
+
+_:b117  dc:date     "1955"^^xsd:gYear;
+        dc:creator  _:b119;
+        rdf:type    dbpo:Sculpture;
+        dc:title    "Christian Bjelland" .
+
+_:b119  foaf:name  "Ottar Espedal";
+        rdf:type   foaf:Person .
+
+_:b120  geo:location  _:b121 .
+
+_:b121  geo:long        5.735659;
+        rdf:type        geo:Point;
+        geo:lat         58.971924;
+        dc:description  "Bispebryggen/Jorenholmen" .
+
+_:b120  dc:date     "2000"^^xsd:gYear;
+        dc:creator  _:b122;
+        rdf:type    dbpo:Sculpture;
+        dc:title    "Cornelius Cruys" .
+
+_:b122  foaf:name  "Per Ung.";
+        rdf:type   foaf:Person .
+
+_:b123  geo:location  _:b124 .
+
+_:b124  geo:long        5.733735;
+        rdf:type        geo:Point;
+        geo:lat         58.961231;
+        dc:description  "Våland skole." .
+
+_:b123  dc:date     "1990"^^xsd:gYear;
+        dc:creator  _:b125;
+        rdf:type    dbpo:Sculpture;
+        dc:title    "Den gode hyrde" .
+
+_:b125  foaf:name  "Roland Lengauer";
+        rdf:type   foaf:Person .
+
+_:b126  geo:location  _:b127 .
+
+_:b127  geo:long        5.728811;
+        rdf:type        geo:Point;
+        geo:lat         58.970966;
+        dc:description  "Strandkaien" .
+
+_:b126  dc:date     "2008"^^xsd:gYear;
+        dc:creator  _:b128;
+        rdf:type    dbpo:Sculpture;
+        dc:title    "En annen strand" .
+
+_:b128  foaf:name  "Tordis Hoem";
+        rdf:type   foaf:Person .
+
+_:b129  geo:location  _:b130 .
+
+_:b130  geo:long        5.702129;
+        rdf:type        geo:Point;
+        geo:lat         58.956356;
+        dc:description  "Mosvannsparken." .
+
+_:b129  dc:date     "2009"^^xsd:gYear;
+        dc:creator  _:b131;
+        rdf:type    dbpo:Sculpture;
+        dc:title    "En stele til Stavanger" .
+
+_:b131  foaf:name  "Jan Groth";
+        rdf:type   foaf:Person .
+
+_:b132  geo:location  _:b133 .
+
+_:b133  geo:long        5.722683;
+        rdf:type        geo:Point;
+        geo:lat         58.962736;
+        dc:description  "Foran Stavanger kunstforening på Madlaveien" .
+
+_:b132  dc:date     "1968"^^xsd:gYear;
+        dc:creator  _:b134;
+        rdf:type    dbpo:Sculpture;
+        dc:title    "Et minne om 'Figure of landscape'" .
+
+_:b134  foaf:name  "Barbara Hepworth";
+        rdf:type   foaf:Person .
+
+_:b135  geo:location  _:b136 .
+
+_:b136  geo:long        5.739321;
+        rdf:type        geo:Point;
+        geo:lat         58.971662;
+        dc:description  "Fiskepiren" .
+
+_:b135  dc:date     "1958"^^xsd:gYear;
+        dc:creator  _:b137;
+        rdf:type    dbpo:Sculpture;
+        dc:title    "Fiskaren" .
+
+_:b137  foaf:name  "Kåre Orud";
+        rdf:type   foaf:Person .
+
+_:b138  geo:location  _:b139 .
+
+_:b139  geo:long        5.669231;
+        rdf:type        geo:Point;
+        geo:lat         58.941782;
+        dc:description  "Ved Møllebukta" .
+
+_:b138  dc:date     "1994"^^xsd:gYear;
+        dc:creator  _:b140;
+        rdf:type    dbpo:Sculpture;
+        dc:title    "Fiskerens kone" .
+
+_:b140  foaf:name  "Reier E. Eide";
+        rdf:type   foaf:Person .
+
+_:b141  geo:location  _:b142 .
+
+_:b142  geo:long        5.737274;
+        rdf:type        geo:Point;
+        geo:lat         58.959815;
+        dc:description  "Roaldsøy skole." .
+
+_:b141  dc:creator  _:b143;
+        rdf:type    dbpo:Sculpture;
+        dc:title    "Fole" .
+
+_:b143  foaf:name  "Svein Magnus Håvardstein";
+        rdf:type   foaf:Person .
+
+_:b144  geo:location  _:b145 .
+
+_:b145  geo:long        5.748208;
+        rdf:type        geo:Point;
+        geo:lat         58.969151;
+        dc:description  "Johannesparken" .
+
+_:b144  dc:date     "1960"^^xsd:gYear;
+        dc:creator  _:b146;
+        rdf:type    dbpo:Sculpture;
+        dc:title    "Folungene" .
+
+_:b146  foaf:name  "Hugo Frank Wathne";
+        rdf:type   foaf:Person .
+
+_:b147  geo:location  _:b148 .
+
+_:b148  geo:long        5.726770;
+        rdf:type        geo:Point;
+        geo:lat         59.002142;
+        dc:description  "Skeie skole skolegården." .
+
+_:b147  dc:date     "1987"^^xsd:gYear;
+        dc:creator  _:b149;
+        rdf:type    dbpo:Sculpture;
+        dc:title    "Forstenet insektliv" .
+
+_:b149  foaf:name  "Hugo Frank Wathne";
+        rdf:type   foaf:Person .
+
+_:b150  geo:location  _:b151 .
+
+_:b151  geo:long        5.712818;
+        rdf:type        geo:Point;
+        geo:lat         58.965437;
+        dc:description  "Holbergsgata ved Stavanger stadion" .
+
+_:b150  dc:date     "1958"^^xsd:gYear;
+        dc:creator  _:b152;
+        rdf:type    dbpo:Sculpture;
+        dc:title    "Fotballspilleren" .
+
+_:b152  foaf:name  "Magnus Vigrestad";
+        rdf:type   foaf:Person .
+
+_:b153  geo:location  _:b154 .
+
+_:b154  geo:long        5.699309;
+        rdf:type        geo:Point;
+        geo:lat         58.938101;
+        dc:description  "Folkets Hus. Mosaikk i foajeen" .
+
+_:b153  dc:date     "1962"^^xsd:gYear;
+        dc:creator  _:b155;
+        rdf:type    dbpo:Sculpture;
+        dc:title    "Frigjøring" .
+
+_:b155  foaf:name  "Andreas Bøe";
+        rdf:type   foaf:Person .
+
+_:b156  geo:location  _:b157 .
+
+_:b157  geo:long        5.710644;
+        rdf:type        geo:Point;
+        geo:lat         58.961156;
+        dc:description  "Madlaveien ved Mosvannsparken" .
+
+_:b156  dc:date     "1952"^^xsd:gYear;
+        dc:creator  _:b158;
+        rdf:type    dbpo:Sculpture;
+        dc:title    "Frihetsmonumentet" .
+
+_:b158  foaf:name  "Ottar Espeland";
+        rdf:type   foaf:Person .
+
+_:b159  geo:location  _:b160 .
+
+_:b160  geo:long        5.748914;
+        rdf:type        geo:Point;
+        geo:lat         58.968662;
+        dc:description  "Ved St. Johannes kirke" .
+
+_:b159  dc:date     "1967"^^xsd:gYear;
+        dc:creator  _:b161;
+        rdf:type    dbpo:Sculpture;
+        dc:title    "Gabriel Olsen" .
+
+_:b161  foaf:name  "Erik Haugland";
+        rdf:type   foaf:Person .
+
+_:b162  geo:location  _:b163 .
+
+_:b163  geo:long        5.734222;
+        rdf:type        geo:Point;
+        geo:lat         58.967068;
+        dc:description  "Ved Breiavatnet" .
+
+_:b162  dc:date     "1958"^^xsd:gYear;
+        dc:creator  _:b164;
+        rdf:type    dbpo:Sculpture;
+        dc:title    "Gasellen" .
+
+_:b164  foaf:name  "Marshall Fredericks";
+        rdf:type   foaf:Person .
+
+_:b165  geo:location  _:b166 .
+
+_:b166  geo:long        5.734637;
+        rdf:type        geo:Point;
+        geo:lat         58.971419;
+        dc:description  "Lille Sølvbergtorget" .
+
+_:b165  dc:date     "1983"^^xsd:gYear;
+        dc:creator  _:b167;
+        rdf:type    dbpo:Sculpture;
+        dc:title    "Go'dagen (Kånå)" .
+
+_:b167  foaf:name  "Tone Thiis Schjetne";
+        rdf:type   foaf:Person .
+
+_:b168  geo:location  _:b169 .
+
+_:b169  geo:long        5.698448;
+        rdf:type        geo:Point;
+        geo:lat         58.937529;
+        dc:description  "Kleivaparken" .
+
+_:b168  dc:date     "1993"^^xsd:gYear;
+        dc:creator  _:b170;
+        rdf:type    dbpo:Sculpture;
+        dc:title    "Gustav Natvig-Pedersen" .
+
+_:b170  foaf:name  "Irma Bruun Hodne";
+        rdf:type   foaf:Person .
+
+_:b171  geo:location  _:b172 .
+
+_:b172  geo:long        5.733128;
+        rdf:type        geo:Point;
+        geo:lat         58.970464;
+        dc:description  "Kirkegata" .
+
+_:b171  dc:date     "1976"^^xsd:gYear;
+        dc:creator  _:b173;
+        rdf:type    dbpo:Sculpture;
+        dc:title    "Gutt og ponni" .
+
+_:b173  foaf:name  "Ottar Espeland";
+        rdf:type   foaf:Person .
+
+_:b174  geo:location  _:b175 .
+
+_:b175  geo:long        5.732095;
+        rdf:type        geo:Point;
+        geo:lat         58.969027;
+        dc:description  "Byparken ved Kongsgård skole" .
+
+_:b174  dc:date     "1953"^^xsd:gYear;
+        dc:creator  _:b176;
+        rdf:type    dbpo:Sculpture;
+        dc:title    "Gutten og andemor" .
+
+_:b176  foaf:name  "Erik Haugland";
+        rdf:type   foaf:Person .
+
+_:b177  geo:location  _:b178 .
+
+_:b178  geo:long        5.734874;
+        rdf:type        geo:Point;
+        geo:lat         58.968858;
+        dc:description  "Byparken" .
+
+_:b177  dc:date     "1925"^^xsd:gYear;
+        dc:creator  _:b179;
+        rdf:type    dbpo:Sculpture;
+        dc:title    "Gutten og bukken" .
+
+_:b179  foaf:name  "Stinius Fredriksen";
+        rdf:type   foaf:Person .
+
+_:b180  geo:location  _:b181 .
+
+_:b181  geo:long        5.729569;
+        rdf:type        geo:Point;
+        geo:lat         58.964917;
+        dc:description  "Kannikparken" .
+
+_:b180  dc:date     "1933"^^xsd:gYear;
+        dc:creator  _:b182;
+        rdf:type    dbpo:Sculpture;
+        dc:title    "Gutten og havfruen" .
+
+_:b182  foaf:name  "Ståle Kyllingstad";
+        rdf:type   foaf:Person .
+
+_:b183  geo:location  _:b184 .
+
+_:b184  geo:long        5.748181;
+        rdf:type        geo:Point;
+        geo:lat         58.971949;
+        dc:description  "Badedammen" .
+
+_:b183  dc:date     "1995"^^xsd:gYear;
+        dc:creator  _:b185;
+        rdf:type    dbpo:Sculpture;
+        dc:title    "Halvor Sivertsen" .
+
+_:b185  foaf:name  "Jan Næss";
+        rdf:type   foaf:Person .
+
+_:b186  geo:location  _:b187 .
+
+_:b187  geo:long        5.728434;
+        rdf:type        geo:Point;
+        geo:lat         58.970374;
+        dc:description  "Løvdalssvingen" .
+
+_:b186  dc:date     "1995"^^xsd:gYear;
+        dc:creator  _:b188;
+        rdf:type    dbpo:Sculpture;
+        dc:title    "Henrik Steffens" .
+
+_:b188  foaf:name  "Hugo Frank Wathne";
+        rdf:type   foaf:Person .
+
+_:b189  geo:location  _:b190 .
+
+_:b190  geo:long        5.656288;
+        rdf:type        geo:Point;
+        geo:lat         58.943953;
+        dc:description  "Hafrsfjord skole" .
+
+_:b189  dc:date     "1995"^^xsd:gYear;
+        dc:creator  _:b191;
+        rdf:type    dbpo:Sculpture;
+        dc:title    "Historisk grunn" .
+
+_:b191  foaf:name  "Jens Erland";
+        rdf:type   foaf:Person .
+
+_:b192  geo:location  _:b193 .
+
+_:b193  geo:long        5.747792;
+        rdf:type        geo:Point;
+        geo:lat         58.971590;
+        dc:description  "Den står i endepunktet av Blå promenade ved Badedammen" .
+
+_:b192  dc:date     "2010"^^xsd:gYear;
+        dc:creator  _:b194;
+        rdf:type    dbpo:Sculpture;
+        dc:title    "Innsyn - utsyn" .
+
+_:b194  foaf:name  "Kjersti Wexelsen Goksøyr";
+        rdf:type   foaf:Person .
+
+_:b195  geo:location  _:b196 .
+
+_:b196  geo:long        5.749232;
+        rdf:type        geo:Point;
+        geo:lat         58.968511;
+        dc:description  "St. Johannes kirke" .
+
+_:b195  dc:date     "1966"^^xsd:gYear;
+        dc:creator  _:b197;
+        rdf:type    dbpo:Sculpture;
+        dc:title    "Johan Peter Lunde" .
+
+_:b197  foaf:name  "Erik Haugland";
+        rdf:type   foaf:Person .
+
+_:b198  geo:location  _:b199 .
+
+_:b199  geo:long        5.735355;
+        rdf:type        geo:Point;
+        geo:lat         58.970913;
+        dc:description  "Lars Oftedals plass" .
+
+_:b198  dc:date     "1993"^^xsd:gYear;
+        dc:creator  _:b200;
+        rdf:type    dbpo:Sculpture;
+        dc:title    "Johanna og Broremann" .
+
+_:b200  foaf:name  "Svein Magnus Håvarstein";
+        rdf:type   foaf:Person .
+
+_:b201  geo:location  _:b202 .
+
+_:b202  geo:long        5.679852;
+        rdf:type        geo:Point;
+        geo:lat         58.942075;
+        dc:description  "Madla Bydelshus" .
+
+_:b201  dc:date     "1998"^^xsd:gYear;
+        dc:creator  _:b203;
+        rdf:type    dbpo:Sculpture;
+        dc:title    "Katt med Gjess" .
+
+_:b203  foaf:name  "Skule Vaksvik";
+        rdf:type   foaf:Person .
+
+_:b204  geo:location  _:b205 .
+
+_:b205  geo:long        5.704224;
+        rdf:type        geo:Point;
+        geo:lat         58.950269;
+        dc:description  "Tjensvoll skole" .
+
+_:b204  dc:date     "1981"^^xsd:gYear;
+        dc:creator  _:b206;
+        rdf:type    dbpo:Sculpture;
+        dc:title    "Kalv og fole" .
+
+_:b206  foaf:name  "Hugo Frank Wathne";
+        rdf:type   foaf:Person .
+
+_:b207  geo:location  _:b208 .
+
+_:b208  geo:long        5.721447;
+        rdf:type        geo:Point;
+        geo:lat         58.974242;
+        dc:description  "SR-Bank Bjergsted." .
+
+_:b207  dc:date     "1991"^^xsd:gYear;
+        dc:creator  _:b209;
+        rdf:type    dbpo:Sculpture;
+        dc:title    "Kilden" .
+
+_:b209  foaf:name  "Hugo Frank Wathne";
+        rdf:type   foaf:Person .
+
+_:b210  geo:location  _:b211 .
+
+_:b211  geo:long        5.736290;
+        rdf:type        geo:Point;
+        geo:lat         58.994469;
+        dc:description  "Utenfor Hundvåg Idrettshall og Austbø skole" .
+
+_:b210  dc:date     "1991"^^xsd:gYear;
+        dc:creator  _:b212;
+        rdf:type    dbpo:Sculpture;
+        dc:title    "Kilen" .
+
+_:b212  foaf:name  "Asbjørn Andersen";
+        rdf:type   foaf:Person .
+
+_:b213  geo:location  _:b214 .
+
+_:b214  geo:long        5.729143;
+        rdf:type        geo:Point;
+        geo:lat         58.968261;
+        dc:description  "Kleivå" .
+
+_:b213  dc:date     "1959"^^xsd:gYear;
+        dc:creator  _:b215;
+        rdf:type    dbpo:Sculpture;
+        dc:title    "Kvinnene ved vannposten" .
+
+_:b215  foaf:name  "Erik Haugland";
+        rdf:type   foaf:Person .
+
+_:b216  geo:location  _:b217 .
+
+_:b217  geo:long        5.722138;
+        rdf:type        geo:Point;
+        geo:lat         58.972285;
+        dc:description  "Lars Hertervigs plass" .
+
+_:b216  dc:date     "1948"^^xsd:gYear;
+        dc:creator  _:b218;
+        rdf:type    dbpo:Sculpture;
+        dc:title    "Lars Hertervig" .
+
+_:b218  foaf:name  "Stinius Fredriksen";
+        rdf:type   foaf:Person .
+
+_:b219  geo:location  _:b220 .
+
+_:b220  geo:long        5.727645;
+        rdf:type        geo:Point;
+        geo:lat         58.970609;
+        dc:description  "Lars Hertervigs gate" .
+
+_:b219  dc:date     "1980"^^xsd:gYear;
+        dc:creator  _:b221;
+        rdf:type    dbpo:Sculpture;
+        dc:title    "Lars H. Lende" .
+
+_:b221  foaf:name  "Hugo Frank Wathne.";
+        rdf:type   foaf:Person .
+
+_:b222  geo:location  _:b223 .
+
+_:b223  geo:long        5.7409062;
+        rdf:type        geo:Point;
+        geo:lat         58.9677538;
+        dc:description  "Vår Frues plass på Storhaug" .
+
+_:b222  dc:date     "1950"^^xsd:gYear;
+        dc:creator  _:b224;
+        rdf:type    dbpo:Sculpture;
+        dc:title    "Lars Olsen Skrefsrud" .
+
+_:b224  foaf:name  "Erik Haugland";
+        rdf:type   foaf:Person .
+
+_:b225  geo:location  _:b226 .
+
+_:b226  geo:long        5.732135;
+        rdf:type        geo:Point;
+        geo:lat         58.965941;
+        dc:description  "Nederst i Kannikbekken/Prestegårdsparken" .
+
+_:b225  dc:creator  _:b227;
+        rdf:type    dbpo:Sculpture;
+        dc:title    "Leda og svanen" .
+
+_:b227  foaf:name  "Per Ung";
+        rdf:type   foaf:Person .
+
+_:b228  geo:location  _:b229 .
+
+_:b229  geo:long        5.732783;
+        rdf:type        geo:Point;
+        geo:lat         58.965601;
+        dc:description  "Utenfor Rogaland Teater" .
+
+_:b228  dc:date     "1997"^^xsd:gYear;
+        dc:creator  _:b230;
+        rdf:type    dbpo:Sculpture;
+        dc:title    "Leiv Isaksen" .
+
+_:b230  foaf:name  "Hugo Frank Wathne";
+        rdf:type   foaf:Person .
+
+_:b231  geo:location  _:b232 .
+
+_:b232  geo:long        5.695842;
+        rdf:type        geo:Point;
+        geo:lat         58.949533;
+        dc:description  "Auglend skole" .
+
+_:b231  dc:date     "1980"^^xsd:gYear;
+        dc:creator  _:b233;
+        rdf:type    dbpo:Sculpture;
+        dc:title    "Lekeskulptur" .
+
+_:b233  foaf:name  "Hugo Frank Wathne";
+        rdf:type   foaf:Person .
+
+_:b234  geo:location  _:b235 .
+
+_:b235  geo:long        5.602897;
+        rdf:type        geo:Point;
+        geo:lat         58.966986;
+        dc:description  "Måkeveien i Kvernevik" .
+
+_:b234  dc:date     "1972"^^xsd:gYear;
+        dc:creator  _:b236;
+        rdf:type    dbpo:Sculpture;
+        dc:title    "Lekeskulptur" .
+
+_:b236  foaf:name  "Hugo Frank Wathne";
+        rdf:type   foaf:Person .
+
+_:b237  geo:location  _:b238 .
+
+_:b238  geo:long        5.728320;
+        rdf:type        geo:Point;
+        geo:lat         58.970148;
+        dc:description  "Lendelunden" .
+
+_:b237  dc:date     "1993"^^xsd:gYear;
+        dc:creator  _:b239;
+        rdf:type    dbpo:Sculpture;
+        dc:title    "Lendegutt med Fagamatøren" .
+
+_:b239  foaf:name  "Gøril Førsund.";
+        rdf:type   foaf:Person .
+
+_:b240  geo:location  _:b241 .
+
+_:b241  geo:long        5.716450;
+        rdf:type        geo:Point;
+        geo:lat         58.971573;
+        dc:description  "Kampen skole" .
+
+_:b240  dc:date     "1997"^^xsd:gYear;
+        dc:creator  _:b242;
+        rdf:type    dbpo:Sculpture;
+        dc:title    "Maren" .
+
+_:b242  foaf:name  "Gøril Førsund.";
+        rdf:type   foaf:Person .
+
+_:b243  geo:location  _:b244 .
+
+_:b244  geo:long        5.711873;
+        rdf:type        geo:Point;
+        geo:lat         58.951998;
+        dc:description  "Mosheim sykehjem" .
+
+_:b243  dc:date     "1984"^^xsd:gYear;
+        dc:creator  _:b245;
+        rdf:type    dbpo:Sculpture;
+        dc:title    "Mor og barn" .
+
+_:b245  foaf:name  "Irma Bruun Hodne";
+        rdf:type   foaf:Person .
+
+_:b246  geo:location  _:b247 .
+
+_:b247  geo:long        5.732976;
+        rdf:type        geo:Point;
+        geo:lat         58.892273;
+        dc:description  "Forusbeen 3" .
+
+_:b246  dc:date     "1981"^^xsd:gYear;
+        dc:creator  _:b248;
+        rdf:type    dbpo:Sculpture;
+        dc:title    "Moses-fontenen" .
+
+_:b248  foaf:name  "Roland Lengauer";
+        rdf:type   foaf:Person .
+
+_:b249  geo:location  _:b250 .
+
+_:b250  geo:long        5.703660;
+        rdf:type        geo:Point;
+        geo:lat         58.955106;
+        dc:description  "Utenfor inngangen til Rogaland Kunstmuseum i Mosvannsparken" .
+
+_:b249  dc:date     "1995"^^xsd:gYear;
+        dc:creator  _:b251;
+        rdf:type    dbpo:Sculpture;
+        dc:title    "Møbius" .
+
+_:b251  foaf:name  "Aase Texmon Rygh";
+        rdf:type   foaf:Person .
+
+_:b252  geo:location  _:b253 .
+
+_:b253  geo:long        5.729135;
+        rdf:type        geo:Point;
+        geo:lat         58.968260;
+        dc:description  "Olavskleiva" .
+
+_:b252  dc:date     "1959"^^xsd:gYear;
+        dc:creator  _:b254;
+        rdf:type    dbpo:Sculpture;
+        dc:title    "Olavsbrønnen" .
+
+_:b254  foaf:name  "Erik Haugland";
+        rdf:type   foaf:Person .
+
+_:b255  geo:location  _:b256 .
+
+_:b256  geo:long        5.735116;
+        rdf:type        geo:Point;
+        geo:lat         58.973004;
+        dc:description  "Foran Oljemuseet" .
+
+_:b255  dc:date     "2002"^^xsd:gYear;
+        dc:creator  _:b257;
+        rdf:type    dbpo:Sculpture;
+        dc:title    "Oljearbeideren" .
+
+_:b257  foaf:name  "Hugo Frank Wathne";
+        rdf:type   foaf:Person .
+
+_:b258  geo:location  _:b259 .
+
+_:b259  geo:long        5.720014;
+        rdf:type        geo:Point;
+        geo:lat         58.975884;
+        dc:description  "Bjergstedparken" .
+
+_:b258  dc:date     "1981"^^xsd:gYear;
+        dc:creator  _:b260;
+        rdf:type    dbpo:Sculpture;
+        dc:title    "Pike med sjal" .
+
+_:b260  foaf:name  "Stinius Fredriksen";
+        rdf:type   foaf:Person .
+
+_:b261  geo:location  _:b262 .
+
+_:b262  geo:long        5.679267;
+        rdf:type        geo:Point;
+        geo:lat         58.950437;
+        dc:description  "Madlamark skole" .
+
+_:b261  dc:date     "1995"^^xsd:gYear;
+        dc:creator  _:b263;
+        rdf:type    dbpo:Sculpture;
+        dc:title    "Prometheus" .
+
+_:b263  foaf:name  "Kristoffer Nasilowski";
+        rdf:type   foaf:Person .
+
+_:b264  geo:location  _:b265 .
+
+_:b265  geo:long        5.727190;
+        rdf:type        geo:Point;
+        geo:lat         58.891190;
+        dc:description  "Forus Travbane" .
+
+_:b264  dc:date     "1998"^^xsd:gYear;
+        dc:creator  _:b266;
+        rdf:type    dbpo:Sculpture;
+        dc:title    "Rex Rodney" .
+
+_:b266  foaf:name  "Tore Bjørn Skjølsvik";
+        rdf:type   foaf:Person .
+
+_:b267  geo:location  _:b268 .
+
+_:b268  geo:long        5.735927;
+        rdf:type        geo:Point;
+        geo:lat         58.971321;
+        dc:description  "Østervåg" .
+
+_:b267  dc:date     "1985"^^xsd:gYear;
+        dc:creator  _:b269;
+        rdf:type    dbpo:Sculpture;
+        dc:title    "Sau og lam" .
+
+_:b269  foaf:name  "Svein Magnus Håvardstein";
+        rdf:type   foaf:Person .
+
+_:b270  geo:location  _:b271 .
+
+_:b271  geo:long        5.732159;
+        rdf:type        geo:Point;
+        geo:lat         58.969003;
+        dc:description  "Breiavatnet ved Kongsgård skole" .
+
+_:b270  dc:date     "1917"^^xsd:gYear;
+        dc:creator  _:b272;
+        rdf:type    dbpo:Sculpture;
+        dc:title    "Sigbjørn Obstfelder" .
+
+_:b272  foaf:name  "Gustav Vigeland";
+        rdf:type   foaf:Person .
+
+_:b273  geo:location  _:b274 .
+
+_:b274  geo:long        5.730788;
+        rdf:type        geo:Point;
+        geo:lat         58.970528;
+        dc:description  "Ved Honnørbryggen" .
+
+_:b273  dc:date     "1968"^^xsd:gYear;
+        dc:creator  _:b275;
+        rdf:type    dbpo:Sculpture;
+        dc:title    "Sjøfartsmonumentet" .
+
+_:b275  foaf:name  "Arnold Haukeland";
+        rdf:type   foaf:Person .
+
+_:b276  geo:location  _:b277 .
+
+_:b277  geo:long        5.702961;
+        rdf:type        geo:Point;
+        geo:lat         58.955379;
+        dc:description  "Rogaland Kunstmuseum" .
+
+_:b276  dc:date     "1998"^^xsd:gYear;
+        dc:creator  _:b278;
+        rdf:type    dbpo:Sculpture;
+        dc:title    "Skara Brae" .
+
+_:b278  foaf:name  "Bård Breivik";
+        rdf:type   foaf:Person .
+
+_:b279  geo:location  _:b280 .
+
+_:b280  geo:long        5.741846;
+        rdf:type        geo:Point;
+        geo:lat         58.966262;
+        dc:description  "Storhaug skole" .
+
+_:b279  dc:date     "1995"^^xsd:gYear;
+        dc:creator  _:b281;
+        rdf:type    dbpo:Sculpture;
+        dc:title    "Skolemusikanten" .
+
+_:b281  foaf:name  "Gøril Førsund.";
+        rdf:type   foaf:Person .
+
+_:b282  geo:location  _:b283 .
+
+_:b283  geo:long        5.679308;
+        rdf:type        geo:Point;
+        geo:lat         58.983466;
+        dc:description  "Tasta skole" .
+
+_:b282  dc:date     "1997"^^xsd:gYear;
+        dc:creator  _:b284;
+        rdf:type    dbpo:Sculpture;
+        dc:title    "Skulptur" .
+
+_:b284  foaf:name  "Bjørn Melbye Gulliksen";
+        rdf:type   foaf:Person .
+
+_:b285  geo:location  _:b286 .
+
+_:b286  geo:long        5.699322;
+        rdf:type        geo:Point;
+        geo:lat         58.936327;
+        dc:description  "Universitetet i Stavanger" .
+
+_:b285  dc:date     "1995"^^xsd:gYear;
+        dc:creator  _:b287;
+        rdf:type    dbpo:Sculpture;
+        dc:title    "Skulptur" .
+
+_:b287  foaf:name  "Michael O'Donnel";
+        rdf:type   foaf:Person .
+
+_:b288  geo:location  _:b289 .
+
+_:b289  geo:long        5.709437;
+        rdf:type        geo:Point;
+        geo:lat         58.960120;
+        dc:description  "Mosvannsparken" .
+
+_:b288  dc:date     "2000"^^xsd:gYear;
+        dc:creator  _:b290;
+        rdf:type    dbpo:Sculpture;
+        dc:title    "Skulptur i betong" .
+
+_:b290  foaf:name  "Frank Åsnes";
+        rdf:type   foaf:Person .
+
+_:b291  geo:location  _:b292 .
+
+_:b292  geo:long        5.730291;
+        rdf:type        geo:Point;
+        geo:lat         58.963702;
+        dc:description  "Arkeologisk museum" .
+
+_:b291  dc:date     "1994"^^xsd:gYear;
+        dc:creator  _:b293;
+        rdf:type    dbpo:Sculpture;
+        dc:title    "Skulpturobjekter i bakken" .
+
+_:b293  foaf:name  "Mari Røysamb";
+        rdf:type   foaf:Person .
+
+_:b294  geo:location  _:b295 .
+
+_:b295  geo:long        5.733594;
+        rdf:type        geo:Point;
+        geo:lat         58.970075;
+        dc:description  "Domkirkeplassen" .
+
+_:b294  dc:date     "1984"^^xsd:gYear;
+        dc:creator  _:b296;
+        rdf:type    dbpo:Sculpture;
+        dc:title    "Soltre" .
+
+_:b296  foaf:name  "Arne Vinje Gunnerud";
+        rdf:type   foaf:Person .
+
+_:b297  geo:location  _:b298 .
+
+_:b298  geo:long        5.740203;
+        rdf:type        geo:Point;
+        geo:lat         58.964737;
+        dc:description  "St. Svithun skole" .
+
+_:b297  dc:date     "1985"^^xsd:gYear;
+        dc:creator  _:b299;
+        rdf:type    dbpo:Sculpture;
+        dc:title    "St. Svithun" .
+
+_:b299  foaf:name  "Tore Bjørn Skjølsvik";
+        rdf:type   foaf:Person .
+
+_:b300  geo:location  _:b301 .
+
+_:b301  geo:long        5.736026;
+        rdf:type        geo:Point;
+        geo:lat         58.963280;
+        dc:description  "Vestibylen i Politikammeret" .
+
+_:b300  dc:date     "1996"^^xsd:gYear;
+        dc:creator  _:b302;
+        rdf:type    dbpo:Sculpture;
+        dc:title    "Streng i rom" .
+
+_:b302  foaf:name  "Hugo Frank Wathne";
+        rdf:type   foaf:Person .
+
+_:b303  geo:location  _:b304 .
+
+_:b304  geo:long        5.738384;
+        rdf:type        geo:Point;
+        geo:lat         58.966493;
+        dc:description  "Sven Oftedals plass" .
+
+_:b303  dc:date     "1950"^^xsd:gYear;
+        dc:creator  _:b305;
+        rdf:type    dbpo:Sculpture;
+        dc:title    "Sven Oftedal" .
+
+_:b305  foaf:name  "Per Palle Storm";
+        rdf:type   foaf:Person .
+
+_:b306  geo:location  _:b307 .
+
+_:b307  geo:long        5.671898;
+        rdf:type        geo:Point;
+        geo:lat         58.941379;
+        dc:description  "Møllebukta" .
+
+_:b306  dc:date     "1983"^^xsd:gYear;
+        dc:creator  _:b308;
+        rdf:type    dbpo:Sculpture;
+        dc:title    "Sverd i fjell" .
+
+_:b308  foaf:name  "Fritz Røed";
+        rdf:type   foaf:Person .
+
+_:b309  geo:location  _:b310 .
+
+_:b310  geo:long        5.755370;
+        rdf:type        geo:Point;
+        geo:lat         58.957061;
+        dc:description  "Ramsvigtunet Sykehjem og Omsorgsboliger" .
+
+_:b309  dc:date     "1985"^^xsd:gYear;
+        dc:creator  _:b311;
+        rdf:type    dbpo:Sculpture;
+        dc:title    "Så sant jeg lever" .
+
+_:b311  foaf:name  "Arne Vinje Gunnerud";
+        rdf:type   foaf:Person .
+
+_:b312  geo:location  _:b313 .
+
+_:b313  geo:long        5.746523;
+        rdf:type        geo:Point;
+        geo:lat         58.959645;
+        dc:description  "Paradis" .
+
+_:b312  dc:date     "1975"^^xsd:gYear;
+        dc:creator  _:b314;
+        rdf:type    dbpo:Sculpture;
+        dc:title    "Theodor Dahl" .
+
+_:b314  foaf:name  "Hubert Wilfan";
+        rdf:type   foaf:Person .
+
+_:b315  geo:location  _:b316 .
+
+_:b316  geo:long        5.718743;
+        rdf:type        geo:Point;
+        geo:lat         58.976581;
+        dc:description  "Bjergstedparken" .
+
+_:b315  dc:date     "1999"^^xsd:gYear;
+        dc:creator  _:b317;
+        rdf:type    dbpo:Sculpture;
+        dc:title    "Thonning Olsen" .
+
+_:b317  foaf:name  "Hugo Frank Wathne";
+        rdf:type   foaf:Person .
+
+_:b318  geo:location  _:b319 .
+
+_:b319  geo:long        5.755642;
+        rdf:type        geo:Point;
+        geo:lat         58.968989;
+        dc:description  "Lervigtunet" .
+
+_:b318  dc:date     "2006"^^xsd:gYear;
+        dc:creator  _:b320;
+        rdf:type    dbpo:Sculpture;
+        dc:title    "Ti øre timen" .
+
+_:b320  foaf:name  "Hugo Frank Wathne";
+        rdf:type   foaf:Person .
+
+_:b321  geo:location  _:b322 .
+
+_:b322  geo:long        5.735312;
+        rdf:type        geo:Point;
+        geo:lat         58.973836;
+        dc:description  "Oljemuseet sjøsiden" .
+
+_:b321  dc:date     "2000"^^xsd:gYear;
+        dc:creator  _:b323;
+        rdf:type    dbpo:Sculpture;
+        dc:title    "Together" .
+
+_:b323  foaf:name  "Gunn Harbitz";
+        rdf:type   foaf:Person .
+
+_:b324  geo:location  _:b325 .
+
+_:b325  geo:long        5.753317;
+        rdf:type        geo:Point;
+        geo:lat         59.011646;
+        dc:description  "Lundsneset Hundvåg" .
+
+_:b324  dc:date     "2013"^^xsd:gYear;
+        dc:creator  _:b326;
+        rdf:type    dbpo:Sculpture;
+        dc:title    "Utøya-minnesmerke" .
+
+_:b326  foaf:name  "Nico Widerberg";
+        rdf:type   foaf:Person .
+
+_:b327  geo:location  _:b328 .
+
+_:b328  geo:long        5.734671;
+        rdf:type        geo:Point;
+        geo:lat         58.972242;
+        dc:description  "Steinkargata rett ved Østervåg" .
+
+_:b327  dc:date     "1995"^^xsd:gYear;
+        dc:creator  _:b329;
+        rdf:type    dbpo:Sculpture;
+        dc:title    "Vekter" .
+
+_:b329  foaf:name  "R. Christensen";
+        rdf:type   foaf:Person .
+
+_:b330  geo:location  _:b331 .
+
+_:b331  geo:long        5.732174;
+        rdf:type        geo:Point;
+        geo:lat         58.973591;
+        dc:description  "Holmen ved DSD-bygget" .
+
+_:b330  dc:date     "1998"^^xsd:gYear;
+        dc:creator  _:b332;
+        rdf:type    dbpo:Sculpture;
+        dc:title    "Årets Stavanger-bedrift" .
+
+_:b332  foaf:name  "Reidar Aasland.";
+        rdf:type   foaf:Person .
+
+_:b333  geo:location  _:b334 .
+
+_:b334  geo:long        5.707629;
+        rdf:type        geo:Point;
+        geo:lat         58.958167;
+        dc:description  "Mosvannsparken" .
+
+_:b333  dc:date     "1981"^^xsd:gYear;
+        dc:creator  _:b335;
+        rdf:type    dbpo:Sculpture;
+        dc:title    "Årvåken" .
+
+_:b335  foaf:name  "Hilde Mæhlum";
+        rdf:type   foaf:Person .

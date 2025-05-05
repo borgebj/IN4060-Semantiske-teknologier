@@ -1,0 +1,58 @@
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dbpo: <http://dbpedia.org/ontology/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix geo: <http://www.w3.org/2003/01/geo/wgs84_pos#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix ottr: <http://ns.ottr.xyz/0.4/> .
+@prefix o-rdf: <http://tpl.ottr.xyz/rdf/0.1/> .
+@prefix ex: <http://example.com/ns#> .
+
+
+ex:Person[
+	ottr:IRI ?personIRI, 
+	! xsd:string ?name			# non-blank
+] :: {
+	o-rdf:Type(?personIRI, foaf:Person),
+	ottr:Triple(?personIRI, foaf:name, ?name)
+} .
+
+
+ex:Point[ 
+	ottr:IRI ?locationIRI, 
+	! xsd:decimal ?lat, 		# non-blank
+	! xsd:decimal ?long, 		# non-blank
+	?! xsd:string ?location		# optional, non-blank
+] :: {
+		o-rdf:Type(?locationIRI, geo:Point),
+		ottr:Triple(?locationIRI, geo:lat, ?lat),
+		ottr:Triple(?locationIRI, dc:description, ?location),
+		ottr:Triple(?locationIRI, geo:long, ?long)
+} .
+	
+	
+ex:Sculpture[ 
+	! xsd:decimal ?lat, 		# non-blank
+	! xsd:decimal ?long, 		# non-blank
+	?! xsd:string ?location, 	# optional, non-blank
+	! xsd:string ?title, 		# non-blank
+	! xsd:string ?artistName, 	# non-blank
+	?! xsd:gYear ?year 			# non-blank, optional
+] :: {	
+	# uses blank node for sculpture (as no IRI is provided)
+	o-rdf:Type(_:a, dbpo:Sculpture),
+	
+	# uses blank node for creator
+	ex:Person(_:creator, ?artistName),
+	ottr:Triple(_:a, dc:creator, _:creator),
+	
+	ottr:Triple(_:a, dc:date, ?year),
+	
+	ottr:Triple(_:a, dc:title, ?title),
+	
+	# uses blank node for location
+	ex:Point(_:loc, ?lat, ?long, ?location),
+	ottr:Triple(_:a, geo:location, _:loc)
+} .
+
