@@ -48,7 +48,6 @@ ex:Sculpture[
 	ottr:Triple(_:a, dc:creator, _:creator),
 	
 	ottr:Triple(_:a, dc:date, ?year),
-	
 	ottr:Triple(_:a, dc:title, ?title),
 	
 	# uses blank node for location
